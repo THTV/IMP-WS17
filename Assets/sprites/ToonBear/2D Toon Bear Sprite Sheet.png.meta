@@ -1,0 +1,1440 @@
+fileFormatVersion: 2
+guid: de23c1a681bab624bb18ebd7213dd4e6
+timeCreated: 1476121044
+licenseType: Store
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: 2D ToonBear Idle Frame 1
+    21300002: 2D ToonBear Idle Frame 2
+    21300004: 2D ToonBear Idle Frame 3
+    21300006: 2D ToonBear Idle Frame 4
+    21300008: 2D ToonBear Idle Frame 5
+    21300010: 2D ToonBear Idle Frame 6
+    21300012: 2D ToonBear Idle Frame 7
+    21300014: 2D ToonBear Idle Frame 8
+    21300016: 2D ToonBear Idle Frame 9
+    21300018: 2D ToonBear Idle Frame 10
+    21300020: 2D ToonBear Run Frame 1
+    21300022: 2D ToonBear Run Frame 2
+    21300024: 2D ToonBear Run Frame 3
+    21300026: 2D ToonBear Run Frame 4
+    21300028: 2D ToonBear Run Frame 5
+    21300030: 2D ToonBear Run Frame 6
+    21300032: 2D ToonBear Run Frame 7
+    21300034: 2D ToonBear Run Frame 8
+    21300036: 2D ToonBear Run Frame 9
+    21300038: 2D ToonBear Run Frame 10
+    21300040: 2D ToonBear Run Frame 11
+    21300042: 2D ToonBear Run Frame 12
+    21300044: 2D ToonBear Punch Frame 1
+    21300046: 2D ToonBear Punch Frame 2
+    21300048: 2D ToonBear Punch Frame 3
+    21300050: 2D ToonBear Punch Frame 4
+    21300052: 2D ToonBear Punch Frame 5
+    21300054: 2D ToonBear Punch Frame 6
+    21300056: 2D ToonBear Punch Frame 7
+    21300058: 2D ToonBear Punch Frame 8
+    21300060: 2D ToonBear Punch Frame 9
+    21300062: 2D ToonBear Punch Frame 10
+    21300064: 2D ToonBear Punch Frame 11
+    21300066: 2D ToonBear Punch Frame 12
+    21300068: 2D ToonBear Runsdfsdfsdf
+    21300070: 2D ToonBear Sprint Frame 2
+    21300072: 2D ToonBear Sprint Frame 3
+    21300074: 2D ToonBear Sprint Frame 4
+    21300076: 2D ToonBear Sprint Frame 5
+    21300078: 2D ToonBear Sprint Frame 6
+    21300080: 2D ToonBear Sprint Frame 7
+    21300082: 2D ToonBear Sprint Frame 8
+    21300084: 2D ToonBear Idle Frame 11
+    21300086: 2D ToonBear Jump Frame 1
+    21300088: 2D ToonBear Jump Frame 2
+    21300090: 2D ToonBear Jump Frame 3
+    21300092: 2D ToonBear Jump Frame 4
+    21300094: 2D ToonBear Jump Frame 5
+    21300096: 2D ToonBear Jump Frame 6
+    21300098: 2D ToonBear Jump Frame 7
+    21300100: 2D ToonBear Jump Frame 8
+    21300102: 2D ToonBear Walk Frame 1
+    21300104: 2D ToonBear Walk Frame 2
+    21300106: 2D ToonBear Walk Frame 3
+    21300108: 2D ToonBear Walk Frame 4
+    21300110: 2D ToonBear Walk Frame 5
+    21300112: 2D ToonBear Walk Frame 6
+    21300114: 2D ToonBear Walk Frame 7
+    21300116: 2D ToonBear Walk Frame 8
+    21300118: 2D ToonBear Walk Frame 9
+    21300120: 2D ToonBear Walk Frame 10
+    21300122: 2D ToonBear Walk Frame 11
+    21300124: 2D ToonBear Walk Frame 12
+    21300126: 2D ToonBear Walk Frame 13
+    21300128: 2D ToonBear Sprint Frame 1
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: 2D ToonBear Idle Frame 1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -65, y: -128}
+        - {x: 74, y: -128}
+        - {x: 74, y: 29}
+        - {x: 73, y: 36}
+        - {x: 41, y: 87}
+        - {x: -39, y: 87}
+        - {x: -65, y: 57}
+    - name: 2D ToonBear Idle Frame 2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 44, y: -76}
+        - {x: 72, y: -37}
+        - {x: 74, y: -33}
+        - {x: 74, y: -8}
+        - {x: 68, y: 6}
+        - {x: 44, y: 9}
+        - {x: 46, y: 78}
+        - {x: 19, y: 86}
+        - {x: -43, y: 86}
+        - {x: -65, y: 28}
+        - {x: -65, y: -128}
+        - {x: 68, y: -128}
+        - {x: 68, y: -123}
+        - {x: 65, y: -118}
+    - name: 2D ToonBear Idle Frame 3
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -63, y: 86}
+        - {x: -65, y: 80}
+        - {x: -65, y: -128}
+        - {x: 70, y: -128}
+        - {x: 74, y: -127}
+        - {x: 74, y: 86}
+    - name: 2D ToonBear Idle Frame 4
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 8, y: 85}
+        - {x: -21, y: 85}
+        - {x: -32, y: 70}
+        - {x: -58, y: 24}
+        - {x: -65, y: -1}
+        - {x: -65, y: -128}
+        - {x: 74, y: -128}
+        - {x: 74, y: 16}
+        - {x: 47, y: 66}
+    - name: 2D ToonBear Idle Frame 5
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 74, y: 31}
+        - {x: 28, y: 85}
+        - {x: -26, y: 85}
+        - {x: -65, y: 26}
+        - {x: -65, y: -128}
+        - {x: 68, y: -128}
+        - {x: 72, y: -121}
+        - {x: 74, y: -90}
+    - name: 2D ToonBear Idle Frame 6
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 74, y: 23}
+        - {x: 22, y: 85}
+        - {x: -23, y: 85}
+        - {x: -34, y: 77}
+        - {x: -65, y: 8}
+        - {x: -65, y: -128}
+        - {x: 68, y: -128}
+        - {x: 68, y: -123}
+        - {x: 66, y: -117}
+        - {x: 74, y: -93}
+    - name: 2D ToonBear Idle Frame 7
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 68, y: -123}
+        - {x: 61, y: -107}
+        - {x: 74, y: -77}
+        - {x: 74, y: 13}
+        - {x: 42, y: 76}
+        - {x: 27, y: 85}
+        - {x: -38, y: 85}
+        - {x: -65, y: 49}
+        - {x: -65, y: -128}
+        - {x: -24, y: -128}
+        - {x: -21, y: -123}
+        - {x: 12, y: -128}
+        - {x: 68, y: -128}
+    - name: 2D ToonBear Idle Frame 8
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1792
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -65, y: 86}
+        - {x: -65, y: -128}
+        - {x: 71, y: -128}
+        - {x: 74, y: -127}
+        - {x: 74, y: 41}
+        - {x: 34, y: 86}
+    - name: 2D ToonBear Idle Frame 9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 37, y: 86}
+        - {x: -34, y: 86}
+        - {x: -65, y: 55}
+        - {x: -65, y: -128}
+        - {x: 68, y: -128}
+        - {x: 74, y: -98}
+        - {x: 74, y: 30}
+    - name: 2D ToonBear Idle Frame 10
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -28, y: 87}
+        - {x: -65, y: 69}
+        - {x: -65, y: -128}
+        - {x: 74, y: -128}
+        - {x: 74, y: 87}
+    - name: 2D ToonBear Run Frame 1
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 15, y: 96}
+        - {x: -7, y: 96}
+        - {x: -57, y: 47}
+        - {x: -96, y: -71}
+        - {x: -96, y: -85}
+        - {x: 3, y: -128}
+        - {x: 73, y: -128}
+        - {x: 73, y: 60}
+        - {x: 49, y: 78}
+    - name: 2D ToonBear Run Frame 2
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 40, y: 97}
+        - {x: -18, y: 97}
+        - {x: -74, y: 40}
+        - {x: -74, y: -123}
+        - {x: -34, y: -128}
+        - {x: 33, y: -128}
+        - {x: 31, y: -122}
+        - {x: 85, y: -23}
+        - {x: 85, y: 44}
+    - name: 2D ToonBear Run Frame 3
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 71, y: 11}
+        - {x: 51, y: 73}
+        - {x: 19, y: 99}
+        - {x: -5, y: 99}
+        - {x: -15, y: 95}
+        - {x: -54, y: 23}
+        - {x: -61, y: -28}
+        - {x: -61, y: -128}
+        - {x: -7, y: -128}
+        - {x: 15, y: -116}
+        - {x: 31, y: -81}
+        - {x: 28, y: -67}
+        - {x: 71, y: -37}
+    - name: 2D ToonBear Run Frame 4
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 23, y: 100}
+        - {x: -27, y: 100}
+        - {x: -35, y: 99}
+        - {x: -90, y: -55}
+        - {x: -90, y: -128}
+        - {x: -55, y: -128}
+        - {x: 71, y: -110}
+        - {x: 71, y: -5}
+        - {x: 58, y: 84}
+    - name: 2D ToonBear Run Frame 5
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -106, y: -103}
+        - {x: 70, y: -103}
+        - {x: 70, y: 69}
+        - {x: 65, y: 84}
+        - {x: 42, y: 99}
+        - {x: -38, y: 99}
+        - {x: -106, y: -4}
+    - name: 2D ToonBear Run Frame 6
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1536
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 68, y: 62}
+        - {x: 58, y: 92}
+        - {x: 28, y: 97}
+        - {x: -13, y: 97}
+        - {x: -39, y: 84}
+        - {x: -105, y: -57}
+        - {x: -105, y: -96}
+        - {x: 13, y: -116}
+        - {x: 48, y: -116}
+        - {x: 68, y: -93}
+    - name: 2D ToonBear Run Frame 7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -58, y: 96}
+        - {x: -95, y: 26}
+        - {x: -95, y: -128}
+        - {x: 49, y: -128}
+        - {x: 73, y: -98}
+        - {x: 73, y: 86}
+        - {x: 71, y: 96}
+    - name: 2D ToonBear Run Frame 8
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 43, y: -94}
+        - {x: 84, y: -12}
+        - {x: 84, y: 81}
+        - {x: 56, y: 97}
+        - {x: -29, y: 97}
+        - {x: -65, y: 34}
+        - {x: -74, y: -80}
+        - {x: -74, y: -122}
+        - {x: -44, y: -128}
+        - {x: 29, y: -128}
+        - {x: 29, y: -123}
+        - {x: 22, y: -117}
+        - {x: 13, y: -113}
+    - name: 2D ToonBear Run Frame 9
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 19, y: 99}
+        - {x: -3, y: 99}
+        - {x: -15, y: 95}
+        - {x: -39, y: 48}
+        - {x: -57, y: -26}
+        - {x: -53, y: -49}
+        - {x: -45, y: -69}
+        - {x: -60, y: -103}
+        - {x: -60, y: -118}
+        - {x: -44, y: -128}
+        - {x: 27, y: -128}
+        - {x: 71, y: -75}
+        - {x: 71, y: 14}
+        - {x: 45, y: 81}
+    - name: 2D ToonBear Run Frame 10
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -90, y: -88}
+        - {x: -90, y: -128}
+        - {x: 17, y: -128}
+        - {x: 71, y: -117}
+        - {x: 71, y: -31}
+        - {x: 55, y: 82}
+        - {x: 24, y: 100}
+        - {x: -16, y: 100}
+        - {x: -59, y: 39}
+    - name: 2D ToonBear Run Frame 11
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 30, y: 99}
+        - {x: -38, y: 99}
+        - {x: -106, y: -81}
+        - {x: -106, y: -103}
+        - {x: 53, y: -103}
+        - {x: 68, y: -77}
+        - {x: 68, y: 23}
+        - {x: 53, y: 93}
+    - name: 2D ToonBear Run Frame 12
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 48, y: 97}
+        - {x: -12, y: 97}
+        - {x: -77, y: 28}
+        - {x: -102, y: -58}
+        - {x: -102, y: -105}
+        - {x: -54, y: -117}
+        - {x: 64, y: -117}
+        - {x: 68, y: -114}
+        - {x: 68, y: 47}
+        - {x: 58, y: 88}
+    - name: 2D ToonBear Punch Frame 1
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 26, y: -2}
+        - {x: -6, y: 53}
+        - {x: -36, y: 85}
+        - {x: -76, y: 85}
+        - {x: -96, y: 72}
+        - {x: -115, y: -104}
+        - {x: -115, y: -128}
+        - {x: -66, y: -128}
+        - {x: -66, y: -123}
+        - {x: -54, y: -128}
+        - {x: 26, y: -128}
+    - name: 2D ToonBear Punch Frame 2
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 22, y: -47}
+        - {x: 20, y: 31}
+        - {x: -3, y: 70}
+        - {x: -21, y: 84}
+        - {x: -71, y: 84}
+        - {x: -93, y: 74}
+        - {x: -114, y: -41}
+        - {x: -114, y: -128}
+        - {x: 26, y: -128}
+        - {x: 26, y: -121}
+        - {x: 11, y: -111}
+    - name: 2D ToonBear Punch Frame 3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 35, y: 30}
+        - {x: 16, y: 56}
+        - {x: -7, y: 81}
+        - {x: -40, y: 81}
+        - {x: -60, y: 74}
+        - {x: -110, y: -92}
+        - {x: -110, y: -119}
+        - {x: -103, y: -128}
+        - {x: 50, y: -128}
+        - {x: 50, y: 22}
+        - {x: 46, y: 30}
+    - name: 2D ToonBear Punch Frame 4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -57, y: 78}
+        - {x: -105, y: 3}
+        - {x: -105, y: -128}
+        - {x: 43, y: -128}
+        - {x: 98, y: -43}
+        - {x: 98, y: 76}
+        - {x: 96, y: 78}
+    - name: 2D ToonBear Punch Frame 5
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 44, y: 77}
+        - {x: -20, y: 77}
+        - {x: -63, y: 29}
+        - {x: -107, y: -86}
+        - {x: -107, y: -128}
+        - {x: 89, y: -128}
+        - {x: 96, y: -127}
+        - {x: 105, y: -81}
+        - {x: 105, y: 64}
+    - name: 2D ToonBear Punch Frame 6
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 58, y: -123}
+        - {x: 99, y: -38}
+        - {x: 99, y: 31}
+        - {x: 14, y: 76}
+        - {x: -23, y: 76}
+        - {x: -43, y: 71}
+        - {x: -107, y: -90}
+        - {x: -107, y: -121}
+        - {x: -104, y: -128}
+        - {x: -86, y: -128}
+        - {x: -53, y: -118}
+        - {x: -41, y: -128}
+        - {x: 30, y: -128}
+    - name: 2D ToonBear Punch Frame 7
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 12, y: 72}
+        - {x: -23, y: 72}
+        - {x: -44, y: 64}
+        - {x: -107, y: -91}
+        - {x: -107, y: -128}
+        - {x: 38, y: -128}
+        - {x: 84, y: -38}
+        - {x: 84, y: 0}
+    - name: 2D ToonBear Punch Frame 8
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 68}
+        - {x: -37, y: 62}
+        - {x: -103, y: -83}
+        - {x: -107, y: -97}
+        - {x: -107, y: -128}
+        - {x: 52, y: -128}
+        - {x: 52, y: 12}
+        - {x: 13, y: 68}
+    - name: 2D ToonBear Punch Frame 9
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -108, y: -128}
+        - {x: 34, y: -128}
+        - {x: 34, y: 65}
+        - {x: -46, y: 65}
+        - {x: -108, y: 0}
+    - name: 2D ToonBear Punch Frame 10
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 47, y: 68}
+        - {x: -27, y: 68}
+        - {x: -108, y: -4}
+        - {x: -108, y: -128}
+        - {x: 36, y: -128}
+        - {x: 38, y: -123}
+        - {x: 54, y: -59}
+        - {x: 54, y: 41}
+    - name: 2D ToonBear Punch Frame 11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 766
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -63, y: 78}
+        - {x: -109, y: -85}
+        - {x: -109, y: -126}
+        - {x: -108, y: -128}
+        - {x: 43, y: -128}
+        - {x: 76, y: 9}
+        - {x: 76, y: 78}
+    - name: 2D ToonBear Punch Frame 12
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 46, y: 81}
+        - {x: -30, y: 81}
+        - {x: -63, y: 27}
+        - {x: -62, y: 8}
+        - {x: -109, y: -105}
+        - {x: -109, y: -123}
+        - {x: -108, y: -128}
+        - {x: 78, y: -128}
+        - {x: 90, y: -114}
+        - {x: 90, y: 72}
+        - {x: 61, y: 78}
+    - name: 2D ToonBear Sprint Frame 1
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: 93}
+        - {x: -66, y: 58}
+        - {x: -81, y: -2}
+        - {x: -62, y: -12}
+        - {x: -48, y: -13}
+        - {x: -40, y: -5}
+        - {x: -37, y: 0}
+        - {x: -36, y: 11}
+        - {x: -33, y: 4}
+        - {x: -73, y: -49}
+        - {x: -104, y: -70}
+        - {x: -104, y: -84}
+        - {x: -101, y: -90}
+        - {x: -33, y: -128}
+        - {x: 90, y: -128}
+        - {x: 90, y: 73}
+        - {x: 23, y: 93}
+    - name: 2D ToonBear Sprint Frame 2
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 20, y: 96}
+        - {x: -11, y: 96}
+        - {x: -65, y: 44}
+        - {x: -72, y: 11}
+        - {x: -72, y: -62}
+        - {x: -65, y: -127}
+        - {x: -54, y: -128}
+        - {x: 8, y: -128}
+        - {x: 81, y: -12}
+        - {x: 81, y: 53}
+        - {x: 53, y: 81}
+    - name: 2D ToonBear Sprint Frame 3
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 48, y: 80}
+        - {x: 14, y: 98}
+        - {x: -6, y: 98}
+        - {x: -49, y: 51}
+        - {x: -85, y: -28}
+        - {x: -85, y: -128}
+        - {x: 60, y: -128}
+        - {x: 64, y: -120}
+        - {x: 64, y: 54}
+        - {x: 62, y: 65}
+    - name: 2D ToonBear Sprint Frame 4
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -40, y: 96}
+        - {x: -108, y: -12}
+        - {x: -108, y: -92}
+        - {x: 62, y: -92}
+        - {x: 82, y: -61}
+        - {x: 82, y: 87}
+        - {x: 78, y: 96}
+    - name: 2D ToonBear Sprint Frame 5
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 90, y: 49}
+        - {x: 61, y: 74}
+        - {x: 13, y: 93}
+        - {x: -4, y: 93}
+        - {x: -86, y: 41}
+        - {x: -66, y: -20}
+        - {x: -47, y: -13}
+        - {x: -40, y: -6}
+        - {x: -37, y: 1}
+        - {x: -33, y: 4}
+        - {x: -61, y: -34}
+        - {x: -98, y: -67}
+        - {x: -104, y: -72}
+        - {x: -104, y: -91}
+        - {x: -22, y: -128}
+        - {x: 32, y: -128}
+        - {x: 57, y: -119}
+        - {x: 51, y: -100}
+        - {x: 48, y: -97}
+        - {x: 90, y: -11}
+    - name: 2D ToonBear Sprint Frame 6
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -45, y: 96}
+        - {x: -65, y: 79}
+        - {x: -65, y: -128}
+        - {x: 13, y: -128}
+        - {x: 78, y: -26}
+        - {x: 78, y: 54}
+        - {x: 34, y: 96}
+    - name: 2D ToonBear Sprint Frame 7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 24, y: 98}
+        - {x: -9, y: 98}
+        - {x: -28, y: 93}
+        - {x: -85, y: -49}
+        - {x: -85, y: -121}
+        - {x: -78, y: -128}
+        - {x: -41, y: -128}
+        - {x: 64, y: -100}
+        - {x: 64, y: 48}
+        - {x: 62, y: 65}
+    - name: 2D ToonBear Sprint Frame 8
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 81, y: 1}
+        - {x: 84, y: 8}
+        - {x: 84, y: 30}
+        - {x: 51, y: 96}
+        - {x: -16, y: 96}
+        - {x: -89, y: 60}
+        - {x: -108, y: -7}
+        - {x: -108, y: -93}
+        - {x: 47, y: -93}
+        - {x: 64, y: -42}
+        - {x: 52, y: -41}
+        - {x: 45, y: -47}
+    - name: 2D ToonBear Idle Frame 11
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -65, y: -128}
+        - {x: 74, y: -128}
+        - {x: 74, y: 29}
+        - {x: 73, y: 36}
+        - {x: 41, y: 87}
+        - {x: -39, y: 87}
+        - {x: -65, y: 57}
+    - name: 2D ToonBear Jump Frame 1
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -48, y: 122}
+        - {x: -52, y: 121}
+        - {x: -52, y: -128}
+        - {x: -11, y: -128}
+        - {x: 59, y: -92}
+        - {x: 59, y: 122}
+    - name: 2D ToonBear Jump Frame 2
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 37, y: 122}
+        - {x: -15, y: 122}
+        - {x: -50, y: 72}
+        - {x: -50, y: -92}
+        - {x: -36, y: -128}
+        - {x: 25, y: -128}
+        - {x: 61, y: -79}
+        - {x: 61, y: 89}
+        - {x: 45, y: 114}
+    - name: 2D ToonBear Jump Frame 3
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 122}
+        - {x: -47, y: 94}
+        - {x: -47, y: -105}
+        - {x: -42, y: -118}
+        - {x: 65, y: -118}
+        - {x: 65, y: 122}
+    - name: 2D ToonBear Jump Frame 4
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -21, y: 122}
+        - {x: -47, y: 93}
+        - {x: -47, y: -89}
+        - {x: -43, y: -104}
+        - {x: -40, y: -105}
+        - {x: 69, y: -105}
+        - {x: 69, y: 122}
+    - name: 2D ToonBear Jump Frame 5
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 58, y: 63}
+        - {x: 52, y: 63}
+        - {x: 53, y: 76}
+        - {x: 56, y: 107}
+        - {x: 25, y: 122}
+        - {x: -47, y: 122}
+        - {x: -47, y: -92}
+        - {x: 16, y: -92}
+        - {x: 70, y: -76}
+        - {x: 75, y: -38}
+        - {x: 75, y: 54}
+        - {x: 71, y: 59}
+    - name: 2D ToonBear Jump Frame 6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -3, y: 122}
+        - {x: -27, y: 110}
+        - {x: -44, y: 85}
+        - {x: -44, y: -67}
+        - {x: -35, y: -103}
+        - {x: 65, y: -103}
+        - {x: 76, y: -84}
+        - {x: 76, y: 122}
+    - name: 2D ToonBear Jump Frame 7
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15, y: 122}
+        - {x: -41, y: 77}
+        - {x: -41, y: -114}
+        - {x: 76, y: -114}
+        - {x: 76, y: 106}
+        - {x: 27, y: 122}
+    - name: 2D ToonBear Jump Frame 8
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 55, y: 122}
+        - {x: -24, y: 122}
+        - {x: -41, y: 101}
+        - {x: -41, y: -94}
+        - {x: -36, y: -126}
+        - {x: 4, y: -126}
+        - {x: 53, y: -117}
+        - {x: 61, y: -114}
+        - {x: 76, y: -47}
+        - {x: 76, y: 118}
+    - name: 2D ToonBear Walk Frame 1
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 62, y: -121}
+        - {x: 62, y: 17}
+        - {x: 52, y: 79}
+        - {x: 19, y: 101}
+        - {x: -42, y: 101}
+        - {x: -69, y: -12}
+        - {x: -69, y: -119}
+        - {x: -66, y: -124}
+        - {x: -61, y: -128}
+        - {x: -32, y: -128}
+        - {x: -29, y: -120}
+        - {x: -5, y: -128}
+        - {x: 39, y: -128}
+    - name: 2D ToonBear Walk Frame 2
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 55, y: -128}
+        - {x: 55, y: 93}
+        - {x: 17, y: 100}
+        - {x: -8, y: 100}
+        - {x: -31, y: 82}
+        - {x: -62, y: -46}
+        - {x: -72, y: -94}
+        - {x: -72, y: -128}
+        - {x: -52, y: -128}
+        - {x: -52, y: -119}
+        - {x: -26, y: -128}
+    - name: 2D ToonBear Walk Frame 3
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15, y: -125}
+        - {x: -13, y: -128}
+        - {x: 37, y: -128}
+        - {x: 40, y: -120}
+        - {x: 47, y: -112}
+        - {x: 47, y: 99}
+        - {x: -49, y: 99}
+        - {x: -79, y: -2}
+        - {x: -79, y: -128}
+        - {x: -66, y: -128}
+        - {x: -60, y: -121}
+        - {x: -23, y: -100}
+        - {x: -17, y: -96}
+    - name: 2D ToonBear Walk Frame 4
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 101}
+        - {x: -27, y: 83}
+        - {x: -70, y: -97}
+        - {x: -70, y: -120}
+        - {x: -62, y: -124}
+        - {x: -46, y: -128}
+        - {x: 38, y: -128}
+        - {x: 43, y: -75}
+        - {x: 43, y: 89}
+        - {x: 16, y: 101}
+    - name: 2D ToonBear Walk Frame 5
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 36, y: -40}
+        - {x: 42, y: 20}
+        - {x: 42, y: 83}
+        - {x: 21, y: 102}
+        - {x: -16, y: 102}
+        - {x: -47, y: 91}
+        - {x: -47, y: -128}
+        - {x: 13, y: -128}
+        - {x: 13, y: -127}
+        - {x: 7, y: -116}
+        - {x: 16, y: -96}
+    - name: 2D ToonBear Walk Frame 6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 43, y: -81}
+        - {x: 43, y: 95}
+        - {x: 15, y: 103}
+        - {x: -17, y: 103}
+        - {x: -44, y: 85}
+        - {x: -57, y: 1}
+        - {x: -57, y: -126}
+        - {x: -49, y: -128}
+        - {x: -6, y: -128}
+        - {x: -4, y: -122}
+        - {x: 15, y: -126}
+        - {x: 27, y: -124}
+    - name: 2D ToonBear Walk Frame 7
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 60, y: -128}
+        - {x: 60, y: 37}
+        - {x: 55, y: 83}
+        - {x: 14, y: 102}
+        - {x: -3, y: 102}
+        - {x: -16, y: 98}
+        - {x: -34, y: 82}
+        - {x: -72, y: -51}
+        - {x: -72, y: -118}
+        - {x: -64, y: -128}
+        - {x: -28, y: -128}
+        - {x: -26, y: -122}
+        - {x: -34, y: -115}
+        - {x: 4, y: -128}
+    - name: 2D ToonBear Walk Frame 8
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 38, y: -101}
+        - {x: 54, y: 80}
+        - {x: 19, y: 100}
+        - {x: -8, y: 100}
+        - {x: -28, y: 94}
+        - {x: -76, y: -66}
+        - {x: -76, y: -128}
+        - {x: 54, y: -128}
+        - {x: 62, y: -125}
+        - {x: 62, y: -100}
+        - {x: 61, y: -99}
+    - name: 2D ToonBear Walk Frame 9
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22, y: 99}
+        - {x: -77, y: -15}
+        - {x: -77, y: -128}
+        - {x: 49, y: -128}
+        - {x: 49, y: 99}
+    - name: 2D ToonBear Walk Frame 10
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -37, y: 100}
+        - {x: -77, y: -21}
+        - {x: -77, y: -128}
+        - {x: 44, y: -128}
+        - {x: 44, y: 100}
+    - name: 2D ToonBear Walk Frame 11
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 43, y: -63}
+        - {x: 43, y: 94}
+        - {x: 29, y: 101}
+        - {x: -27, y: 101}
+        - {x: -63, y: -6}
+        - {x: -63, y: -128}
+        - {x: 21, y: -128}
+        - {x: 21, y: -122}
+        - {x: 14, y: -117}
+        - {x: 34, y: -96}
+    - name: 2D ToonBear Walk Frame 12
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 28, y: 103}
+        - {x: -46, y: 103}
+        - {x: -47, y: 89}
+        - {x: -47, y: -128}
+        - {x: 15, y: -128}
+        - {x: 37, y: -93}
+        - {x: 42, y: -36}
+        - {x: 42, y: 97}
+    - name: 2D ToonBear Walk Frame 13
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 37, y: -123}
+        - {x: 39, y: -117}
+        - {x: 43, y: -110}
+        - {x: 43, y: 101}
+        - {x: 39, y: 103}
+        - {x: -12, y: 103}
+        - {x: -36, y: 84}
+        - {x: -61, y: -53}
+        - {x: -61, y: -115}
+        - {x: -51, y: -128}
+        - {x: -13, y: -128}
+        - {x: -13, y: -123}
+        - {x: -18, y: -118}
+        - {x: 23, y: -123}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
