@@ -7,6 +7,9 @@ using UnityEngine.EventSystems;
 	public class PlayerMovement : MonoBehaviour {
 
 
+        private float horizontalMovement;
+        public float moveSpeed = 10;
+        
 		bool facingRight = true;							// For determining which way the player is currently facing.
 		public VirtualJoystick moveJoystick;
 		
@@ -92,44 +95,24 @@ using UnityEngine.EventSystems;
 			if(canMove)
 			{
 
-				Vector3 dir = Vector3.zero;
-
-				dir.x = Input.GetAxis ("Horizontal");
-				dir.y = Input.GetAxis ("Vertical");
-
-				if (dir.magnitude > 1) {
-					dir.Normalize ();
-				}
-
-				if (move > 0 && !facingRight) {
-					Flip ();
-				} else if (move < 0 && facingRight) {
-					Flip ();
-				}
-
-				if (moveJoystick.InputDirection != Vector3.zero) {
-					dir = moveJoystick.InputDirection;
-				}
-
+				horizontalMovement = Input.GetAxis ("Horizontal");
+				
 				//Move the Player
-			myRigidbody.velocity = new Vector2(dir.x*20, myRigidbody.velocity.y);
-			anim.SetFloat ("speed", dir.x);
+			    myRigidbody.velocity = new Vector2(horizontalMovement * moveSpeed, myRigidbody.velocity.y);
+			    anim.SetFloat ("Speed", horizontalMovement);
 
-
-			}
+                if (Input.GetKey(KeyCode.LeftArrow))
+                {
+                    anim.SetInteger("Direction", 0);
+                    
+                }
+                else if (Input.GetKey(KeyCode.RightArrow))
+                {
+                    anim.SetInteger("Direction", 1);
+                   
+                }
+            }
 		}
-
-		void Flip ()
-		{
-			// Switch the way the player is labelled as facing.
-			facingRight = !facingRight;
-
-			// Multiply the player's x local scale by -1.
-			Vector3 theScale = transform.localScale;
-			theScale.x *= -1;
-			transform.localScale = theScale;
-		}
-
 		//  SOUND
 		void Playsound(int clip)
 		{
