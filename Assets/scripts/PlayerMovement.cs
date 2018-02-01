@@ -62,8 +62,6 @@ using UnityEngine.EventSystems;
 		{
 			if (other.tag == "Cell") 
 			{
-				Playsound(0);
-				Destroy(other.gameObject);
 				cells++;
 			}
 
@@ -118,18 +116,6 @@ using UnityEngine.EventSystems;
 		{
 			GetComponent<AudioSource>().clip = audioclip [clip];
 			GetComponent<AudioSource>().Play ();
-		}
-
-
-		void OnGUI()
-		{
-			GUILayout.Label( "Energiezellen = " + cells );
-			GUILayout.Label( "Leben = " + lifes );
-
-			if (lifes < 0 || dead) 
-			{
-				GUILayout.Label("YOU ARE DEAD !!");
-			}
 		}
 	}
 

@@ -30,4 +30,9 @@ public class PlayerPickUp : MonoBehaviour {
 		GetComponent<AudioSource>().clip = audioclip [clip];
 		GetComponent<AudioSource>().Play ();
 	}
+
+	void OnGUI()
+	{
+		GUILayout.Label( "Energiezellen = " + energie );
+	}
 }
