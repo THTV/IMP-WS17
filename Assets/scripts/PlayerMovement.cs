@@ -65,15 +65,19 @@ using UnityEngine.EventSystems;
 				cells++;
 			}
 
-		if (other.gameObject.tag == "Hurt" || other.gameObject.tag == "Enemy") 
+			if (other.gameObject.tag == "Hurt" || other.gameObject.tag == "Enemy") 
 			{
 				//anim.SetBool ("Hurt", true);
 				lifes--;
 				Playsound(0); //Sound '0' == "argh-woman"
 				if(lifes>0)
 				{
-					GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, 50f));
+					GetComponent<Rigidbody2D>().AddForce(new Vector2(10f, 50f));
 				}
+			}
+
+			if (other.gameObject.tag == "Torch") {
+				Playsound (2); //Sound '2' == "Torch"
 			}
 		}
 
@@ -121,7 +125,6 @@ using UnityEngine.EventSystems;
 
 		void flip() {	 //flip the direction the player is facing
 			facingRight = !facingRight;
-
 			Vector3 theScale = transform.localScale;
 			theScale.x *= -1;
 			transform.localScale = theScale;
