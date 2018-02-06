@@ -20,7 +20,7 @@ public class PlayerPickUp : MonoBehaviour {
 		{
 			Destroy(other.gameObject);
 			energie++;
-			Playsound(0);
+			Playsound(0);   //Sound '0' == "coin9"
 		}
 	}
 
@@ -35,4 +35,6 @@ public class PlayerPickUp : MonoBehaviour {
 	{
 		GUILayout.Label( "Energiezellen = " + energie );
 	}
+
+
 }
