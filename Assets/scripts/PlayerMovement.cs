@@ -10,7 +10,7 @@ using UnityEngine.EventSystems;
         private float horizontalMovement;
         public float moveSpeed = 10;
         
-		bool facingRight = true;							// For determining which way the player is currently facing.
+		//bool facingRight = true;							// For determining which way the player is currently facing.
 		public VirtualJoystick moveJoystick;
 		
 
@@ -101,17 +101,21 @@ using UnityEngine.EventSystems;
 				
 				//Move the Player
 			    myRigidbody.velocity = new Vector2(horizontalMovement * moveSpeed, myRigidbody.velocity.y);
-			    anim.SetFloat ("Speed", horizontalMovement);
+			    //anim.SetFloat ("Speed", horizontalMovement);
 
                 if (Input.GetKey(KeyCode.LeftArrow))
                 {
                     anim.SetInteger("Direction", 0);
+                    anim.SetFloat("MoveSpeed", 10);
                     
                 }
                 else if (Input.GetKey(KeyCode.RightArrow))
                 {
                     anim.SetInteger("Direction", 1);
-                   
+                    anim.SetFloat("MoveSpeed",10);
+                }
+                else {
+                    anim.SetFloat("MoveSpeed", 0);
                 }
             }
 		}
@@ -120,14 +124,6 @@ using UnityEngine.EventSystems;
 		{
 			GetComponent<AudioSource>().clip = audioclip [clip];
 			GetComponent<AudioSource>().Play ();
-		}
-
-
-		void flip() {	 //flip the direction the player is facing
-			facingRight = !facingRight;
-			Vector3 theScale = transform.localScale;
-			theScale.x *= -1;
-			transform.localScale = theScale;
 		}
 	}
 
