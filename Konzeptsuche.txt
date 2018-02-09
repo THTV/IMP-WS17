@@ -1,0 +1,62 @@
+IMP – 19.10.2017
+ 
+-          Bewertungsgrundlagen
+-          Konzept-suche
+ 
+Abgabe: Mitte Februar
+ 
+
+
+
+definitiv Pixelart
+- moderner Charakter mit Zeitmaschine, sitzt in der Vergangenheit fest (genaue Zeit unklar), da Zeitmaschine keine Energie mehr und muss sich an (primitiven Lebensformen) Menschen vorbei kämpfen und nach Energiezellen suchen, um die Zeitmaschine wieder zum Laufen zu bringen
+- keine Leitern, nur Fahrstühle oder Treppen (schräge Ebenen) etc. , was also nicht die Ansicht von vorn oder hinten zeigt
+
+
+Aufbau:
+	Intro Story: per “Diashow”.
+	
+	
+
+Startmenü
+	Start
+	Options
+	Quit
+
+
+Start -> Start direkt in Szene , player gefreezed, overlay pop-in canvas mit text welcher story erklärt (sprechblasen, etc).
+
+
+Als Bonus?
+(ODER : Start -> Abfolge von Bildern die Intro darstellen, man kann per Touch weiterschalten.)
+
+Player startet neben der kaputten Zeitmaschine
+Sammelt Energiezellen
+Bringt diese zurück zur Maschine
+
+
+
+SKILLZ:
+
+Skills mit Abklingzeit
+skill symbol kann in die szene gezogen werden um Effekt auszulösen
+Mögliche Fähigkeiten: Bombenabwurf / 
+
+
+UI:
+unsichtbare Schaltflächen/zonen (rechts/links) für bewegung
+Transparenter Button unten-mittig(noch nicht safe) für die Fähigkeiten
+
+
+
+
+Springen:
+hochwischen um an bestimmten Stellen zu Springen (testen)
+alternativ: Sprungzonen (Zone die prüft ob man unter plattform steht
+				     und zone die man touchen muss um zu springen
+
+
+
+
+
+
