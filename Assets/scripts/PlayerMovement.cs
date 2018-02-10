@@ -20,16 +20,13 @@ using UnityEngine.EventSystems;
 		Animator anim;										// Reference to the player's animator component.
 		Rigidbody2D myRigidbody;
 
-		// GameMenu
-		//bool inGameMenu = false;							// sets GameMenu by Default to off.
-		bool dead = false;	
-
 		//Sound Array
 		public AudioClip[] audioclip;						// Creates an Array to store my GameSounds
 
-		[SerializeField] int lifes = 5;						// Number of Lifes left
+		public int curHealth;								// Number of Lifes left
+		public int maxHealth = 17;							// maximun Life
 		[SerializeField] int cells = 0;						// Number of Cells collected
-
+		bool dead = false;	
 
 
 		void Start()
@@ -38,10 +35,16 @@ using UnityEngine.EventSystems;
 			myRigidbody = GetComponent<Rigidbody2D> ();
 		}
 
+		void Update() {
+			if (curHealth > maxHealth) {
+				curHealth = maxHealth;
+			}
+		}
+
 		void FixedUpdate()
 		{
 			
-			if (lifes < 0.5) //The Death
+			if (curHealth < 0.5) //The Death
 			{
 				GetComponent<Rigidbody2D>().velocity = (new Vector2 (0f, 0f));
 				Debug.Log ("YOU ARE DEAD");
@@ -68,9 +71,9 @@ using UnityEngine.EventSystems;
 			if (other.gameObject.tag == "Hurt" || other.gameObject.tag == "Enemy") 
 			{
 				//anim.SetBool ("Hurt", true);
-				lifes--;
+				curHealth--;
 				Playsound(0); //Sound '0' == "argh-woman"
-				if(lifes>0)
+				if(curHealth>0)
 				{
 					GetComponent<Rigidbody2D>().AddForce(new Vector2(10f, 50f));
 				}
