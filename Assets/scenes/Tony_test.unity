@@ -521,9 +521,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
-  moveJoystick: {fileID: 1368905358}
   audioclip: []
-  lifes: 5
+  curHealth: 17
+  maxHealth: 17
   cells: 0
 --- !u!50 &507126702
 Rigidbody2D:

@@ -4,102 +4,109 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 
-	public class PlayerMovement : MonoBehaviour {
+public class PlayerMovement : MonoBehaviour {
 
 
-        private float horizontalMovement;
-        public float moveSpeed = 10;
-        
-		//bool facingRight = true;							// For determining which way the player is currently facing.
-		public VirtualJoystick moveJoystick;
-		
+    private float horizontalMovement;
+    public float moveSpeed = 10;
+       
+	//public VirtualJoystick moveJoystick;
+	[Range(0, 1)]
 
-		[Range(0, 1)]
+	bool canMove = true;								// To disable Player Movement
+	Animator anim;										// Reference to the player's animator component.
+	Rigidbody2D myRigidbody;
 
-		bool canMove = true;								// To disable Player Movement
-		Animator anim;										// Reference to the player's animator component.
-		Rigidbody2D myRigidbody;
+	//Sound Array
+	public AudioClip[] audioclip;						// Creates an Array to store my GameSounds
 
-		//Sound Array
-		public AudioClip[] audioclip;						// Creates an Array to store my GameSounds
-
-		public int curHealth;								// Number of Lifes left
-		public int maxHealth = 17;							// maximun Life
-		[SerializeField] int cells = 0;						// Number of Cells collected
-		bool dead = false;	
+	public int curHealth;								// Number of Lifes left
+	public int maxHealth = 17;							// maximun Life
+	[SerializeField] int cells = 0;						// Number of Cells collected
+	bool dead = false;
+    
 
 
-		void Start()
-		{
-			anim = GetComponent<Animator>();
-			myRigidbody = GetComponent<Rigidbody2D> ();
+	void Start()
+	{
+		anim = GetComponent<Animator>();
+		myRigidbody = GetComponent<Rigidbody2D> ();
+	}
+
+	void Update() {
+		if (curHealth > maxHealth) {
+			curHealth = maxHealth;
 		}
+        if (canMove)
+        {
+            if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Moved)
+            {
+                Vector2 touchDeltaPosition = Input.GetTouch(0).deltaPosition;
 
-		void Update() {
-			if (curHealth > maxHealth) {
-				curHealth = maxHealth;
-			}
-		}
+                myRigidbody.transform.Translate(-touchDeltaPosition.x * moveSpeed, -touchDeltaPosition.y * moveSpeed, 0);
+            }
+        }
+    }
 
-		void FixedUpdate()
-		{
+	void FixedUpdate()
+	{
 			
-			if (curHealth < 0.5) //The Death
+		if (curHealth < 0.5) //The Death
+		{
+			GetComponent<Rigidbody2D>().velocity = (new Vector2 (0f, 0f));
+			Debug.Log ("YOU ARE DEAD");
+			canMove = false;
+			anim.SetBool ("Dead", true);
+			Playsound(1); //Sound '1' == "game_over"
+			Invoke ("freeze", 7);
+		}
+	}
+
+	void freeze()
+	{
+		Time.timeScale = 0f;
+	}
+
+	//Enter a Trigger
+	void OnTriggerEnter2D(Collider2D other) 
+	{
+		if (other.tag == "Cell") 
+		{
+			cells++;
+		}
+
+		if (other.gameObject.tag == "Hurt" || other.gameObject.tag == "Enemy") 
+		{
+			//anim.SetBool ("Hurt", true);
+			curHealth--;
+			Playsound(0); //Sound '0' == "argh-woman"
+			if(curHealth>0)
 			{
-				GetComponent<Rigidbody2D>().velocity = (new Vector2 (0f, 0f));
-				Debug.Log ("YOU ARE DEAD");
-				canMove = false;
-				anim.SetBool ("Dead", true);
-				Playsound(1); //Sound '1' == "game_over"
-				Invoke ("freeze", 7);
+				GetComponent<Rigidbody2D>().AddForce(new Vector2(10f, 50f));
 			}
 		}
 
-		void freeze()
-		{
-			Time.timeScale = 0f;
+		if (other.gameObject.tag == "Torch") {
+			Playsound (2); //Sound '2' == "Torch"
 		}
+	}
 
-		//Enter a Trigger
-		void OnTriggerEnter2D(Collider2D other) 
+	//Exit a Trigger     
+	public void OnTriggerExit2D(Collider2D other)
+	{
+		if (other.gameObject.tag == "Hurt") 
 		{
-			if (other.tag == "Cell") 
-			{
-				cells++;
-			}
-
-			if (other.gameObject.tag == "Hurt" || other.gameObject.tag == "Enemy") 
-			{
-				//anim.SetBool ("Hurt", true);
-				curHealth--;
-				Playsound(0); //Sound '0' == "argh-woman"
-				if(curHealth>0)
-				{
-					GetComponent<Rigidbody2D>().AddForce(new Vector2(10f, 50f));
-				}
-			}
-
-			if (other.gameObject.tag == "Torch") {
-				Playsound (2); //Sound '2' == "Torch"
-			}
+			anim.SetBool ("Hurt", false);
 		}
-
-		//Exit a Trigger     
-		public void OnTriggerExit2D(Collider2D other)
-		{
-			if (other.gameObject.tag == "Hurt") 
-			{
-				anim.SetBool ("Hurt", false);
-			}
-		}
+	}
 
 
-		public void Move(float move)
-		{
-
-			if(canMove)
-			{
-
+	public void Move(float move)
+	{
+        /*
+        if(canMove)
+            
+            {
 				horizontalMovement = Input.GetAxis ("Horizontal");
 				
 				//Move the Player
@@ -121,14 +128,15 @@ using UnityEngine.EventSystems;
                     anim.SetFloat("MoveSpeed", 0);
                 }
             }
-		}
-		//  SOUND
-		void Playsound(int clip)
-		{
-			GetComponent<AudioSource>().clip = audioclip [clip];
-			GetComponent<AudioSource>().Play ();
-		}
+            */
+    }
+	//  SOUND
+	void Playsound(int clip)
+	{
+		GetComponent<AudioSource>().clip = audioclip [clip];
+		GetComponent<AudioSource>().Play ();
 	}
+}
 
 
 
