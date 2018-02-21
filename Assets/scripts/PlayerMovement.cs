@@ -8,10 +8,10 @@ public class PlayerMovement : MonoBehaviour {
 
 
     private float horizontalMovement;
-    public float moveSpeed = 10;
-       
-	//public VirtualJoystick moveJoystick;
-	[Range(0, 1)]
+    public float moveSpeed = 1;
+
+    //public VirtualJoystick moveJoystick;
+    [Range(0, 1)]
 
 	bool canMove = true;								// To disable Player Movement
 	Animator anim;										// Reference to the player's animator component.
@@ -39,11 +39,32 @@ public class PlayerMovement : MonoBehaviour {
 		}
         if (canMove)
         {
-            if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Moved)
+            if(Input.touchCount > 0)
             {
-                Vector2 touchDeltaPosition = Input.GetTouch(0).deltaPosition;
+                Touch myTouch = Input.touches[0];
 
-                myRigidbody.transform.Translate(-touchDeltaPosition.x * moveSpeed, -touchDeltaPosition.y * moveSpeed, 0);
+                if (myTouch.position.x < Screen.width / 2)
+                {
+                    anim.SetInteger("Direction", 0);
+                    anim.SetFloat("MoveSpeed", 0);
+                    if (myTouch.phase == TouchPhase.Stationary)
+                    {
+                        anim.SetFloat("MoveSpeed", moveSpeed);               
+                        transform.Translate(myTouch.position.x, 0, moveSpeed * Time.deltaTime);
+                        Debug.Log("LINKS");
+                    }
+                }
+                else if(myTouch.position.x > Screen.width / 2)
+                {
+                    anim.SetInteger("Direction", 1);
+                    anim.SetFloat("MoveSpeed", 0);
+                    if (myTouch.phase == TouchPhase.Stationary)
+                    {
+                        anim.SetFloat("MoveSpeed", moveSpeed);                   
+                        transform.Translate(myTouch.position.x, 0, moveSpeed * Time.deltaTime);
+                        Debug.Log("RECHTS");
+                    }
+                }
             }
         }
     }
