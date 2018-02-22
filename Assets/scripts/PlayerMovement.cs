@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour {
 
 
     private float horizontalMovement;
-    public float moveSpeed = 10;
+    public float moveSpeed = 2;
        
 	//public VirtualJoystick moveJoystick;
 	[Range(0, 1)]
@@ -37,15 +37,20 @@ public class PlayerMovement : MonoBehaviour {
 		if (curHealth > maxHealth) {
 			curHealth = maxHealth;
 		}
-        if (canMove)
+       /* if (canMove)
         {
             if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Moved)
             {
                 Vector2 touchDeltaPosition = Input.GetTouch(0).deltaPosition;
+				Debug.Log ("touchPosition = " + touchDeltaPosition +"Touch.X="+touchDeltaPosition.x);
 
-                myRigidbody.transform.Translate(-touchDeltaPosition.x * moveSpeed, -touchDeltaPosition.y * moveSpeed, 0);
+				if (touchDeltaPosition.x > 0) {
+					myRigidbody.transform.Translate(moveSpeed, 0, 0);
+				} else {
+					myRigidbody.transform.Translate(-moveSpeed, 0, 0);
+				}
             }
-        }
+        }   */
     }
 
 	void FixedUpdate()
