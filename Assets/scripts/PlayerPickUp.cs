@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerPickUp : MonoBehaviour {
 
+
+	public PlayerMovement Player;
 	Animator anim; // Reference to the player's animator component.
 	public AudioClip[] audioclip; // Creates an Array to store our GameSounds
 	[SerializeField] int energie = 0; //show me number of energie collected

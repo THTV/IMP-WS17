@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-
 public class PlayerMovement : MonoBehaviour {
 
 
@@ -75,11 +74,6 @@ public class PlayerMovement : MonoBehaviour {
 	//Enter a Trigger
 	void OnTriggerEnter2D(Collider2D other) 
 	{
-		if (other.tag == "Cell") 
-		{
-			cells++;
-		}
-
 		if (other.gameObject.tag == "Hurt" || other.gameObject.tag == "Enemy") 
 		{
 			//anim.SetBool ("Hurt", true);
@@ -99,9 +93,9 @@ public class PlayerMovement : MonoBehaviour {
 	//Exit a Trigger     
 	public void OnTriggerExit2D(Collider2D other)
 	{
-		if (other.gameObject.tag == "Hurt") 
-		{
-			anim.SetBool ("Hurt", false);
+		if (other.tag == "LifePickUp") {
+			Destroy (other.gameObject);
+			curHealth += 1;
 		}
 	}
 
