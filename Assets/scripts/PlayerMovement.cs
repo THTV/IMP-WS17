@@ -36,20 +36,29 @@ public class PlayerMovement : MonoBehaviour {
 		if (curHealth > maxHealth) {
 			curHealth = maxHealth;
 		}
-       /* if (canMove)
+        if (canMove)
         {
             if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Moved)
             {
-                Vector2 touchDeltaPosition = Input.GetTouch(0).deltaPosition;
-				Debug.Log ("touchPosition = " + touchDeltaPosition +"Touch.X="+touchDeltaPosition.x);
+                Vector2 myTouch = Input.GetTouch(0).position;
 
-				if (touchDeltaPosition.x > 0) {
-					myRigidbody.transform.Translate(moveSpeed, 0, 0);
-				} else {
+                if (myTouch.x < Screen.width / 2)
+                {
+                    Debug.Log("LINKS");
 					myRigidbody.transform.Translate(-moveSpeed, 0, 0);
-				}
+                    anim.SetInteger("Direction",0);
+                    anim.SetFloat("MoveSpeed",1);
+				} 
+                else if(myTouch.x > Screen.width / 2)
+                {
+                    Debug.Log("Rechts");
+                    myRigidbody.transform.Translate(moveSpeed, 0, 0);
+                    anim.SetInteger("Direction", 1);
+                    anim.SetFloat("MoveSpeed", 1);
+                }
+                anim.SetFloat("MoveSpeed", 0);
             }
-        }   */
+        }
     }
 
 	void FixedUpdate()
