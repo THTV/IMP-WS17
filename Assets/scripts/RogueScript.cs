@@ -9,6 +9,9 @@ public class RogueScript : MonoBehaviour {
 	public float attackRange;
 	public float speed;
 
+	public int enemyCurHealth;				// Number of Lifes left
+	public int enemyMaxHealth = 8;			// maximun Life
+
 	bool facingRight = true;				// check which direction enemy is facing
 	bool canMove = true;					// To disable enemy Movement
 
