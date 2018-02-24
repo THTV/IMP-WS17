@@ -37,13 +37,13 @@ public class PlayerMovement : MonoBehaviour {
         if (canMove)
         {
             directionX = CrossPlatformInputManager.GetAxis("Horizontal");
-            if(Input.GetAxis("Horizontal") < 0)
+            if(directionX < 0)
             {
                 Debug.Log("LINKS");
                 anim.SetInteger("Direction", 0);
                 anim.SetFloat("MoveSpeed", 1);
             }
-            else if (Input.GetAxis("Horizontal") > 0)
+            else if (directionX > 0)
             {
                 Debug.Log("Rechts");
                 anim.SetInteger("Direction", 1);
