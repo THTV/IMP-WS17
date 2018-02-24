@@ -21,13 +21,13 @@ public class EnemyMovement : MonoBehaviour {
 
 	void flip() {	 //flip the direction the enemy is facing
 		facingRight = !facingRight;
-		Vector3 theScale = transform.localScale;
+		Vector2 theScale = transform.localScale;
 		theScale.x *= -1;
 		transform.localScale = theScale;
 	}
 
 	void Update () { // Enemy follow the Player
-		float distanceToTarget = Vector3.Distance (transform.position,playerTransform.position);
+		float distanceToTarget = Vector2.Distance (transform.position,playerTransform.position);
 		Debug.DrawLine(transform.position,playerTransform.position,Color.yellow);
 
 		if (distanceToTarget < chaseRange) {
