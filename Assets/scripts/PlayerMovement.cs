@@ -2,15 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class PlayerMovement : MonoBehaviour {
 
-
+    float directionX;
     private float horizontalMovement;
-    public float moveSpeed = 2;
-       
-	//public VirtualJoystick moveJoystick;
-	[Range(0, 1)]
+    public float moveSpeed = 5f;
 
 	bool canMove = true;								// To disable Player Movement
 	Animator anim;										// Reference to the player's animator component.
@@ -38,33 +36,54 @@ public class PlayerMovement : MonoBehaviour {
 		}
         if (canMove)
         {
-            if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Moved)
+            directionX = CrossPlatformInputManager.GetAxis("Horizontal");
+            if(Input.GetAxis("Horizontal") < 0)
+            {
+                Debug.Log("LINKS");
+                anim.SetInteger("Direction", 0);
+                anim.SetFloat("MoveSpeed", 1);
+            }
+            else if (Input.GetAxis("Horizontal") > 0)
+            {
+                Debug.Log("Rechts");
+                anim.SetInteger("Direction", 1);
+                anim.SetFloat("MoveSpeed", 1);
+            }
+            else
+            {
+                anim.SetFloat("MoveSpeed", 0);
+            }
+
+            /*if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Moved)
             {
                 Vector2 myTouch = Input.GetTouch(0).position;
 
                 if (myTouch.x < Screen.width / 2)
                 {
                     Debug.Log("LINKS");
-					myRigidbody.transform.Translate(-moveSpeed, 0, 0);
-                    anim.SetInteger("Direction",0);
-                    anim.SetFloat("MoveSpeed",1);
-				} 
-                else if(myTouch.x > Screen.width / 2)
+
+                    anim.SetInteger("Direction", 0);
+                    anim.SetFloat("MoveSpeed", 1);
+                }
+                else if (myTouch.x > Screen.width / 2)
                 {
                     Debug.Log("Rechts");
-                    myRigidbody.transform.Translate(moveSpeed, 0, 0);
+
                     anim.SetInteger("Direction", 1);
                     anim.SetFloat("MoveSpeed", 1);
                 }
-                anim.SetFloat("MoveSpeed", 0);
-            }
+                
+                    Debug.Log("hallo");
+                    anim.SetFloat("MoveSpeed", 0f);
+                
+            }*/
         }
     }
 
 	void FixedUpdate()
 	{
-			
-		if (curHealth < 0.5) //The Death
+        myRigidbody.velocity = new Vector2(directionX * moveSpeed * 30, myRigidbody.velocity.y);
+        if (curHealth < 0.5) //The Death
 		{
 			GetComponent<Rigidbody2D>().velocity = (new Vector2 (0f, 0f));
 			Debug.Log ("YOU ARE DEAD");
@@ -109,9 +128,9 @@ public class PlayerMovement : MonoBehaviour {
 	}
 
 
-	public void Move(float move)
+	/*public void Move(float move)
 	{
-        /*
+        
         if(canMove)
             
             {
@@ -136,8 +155,7 @@ public class PlayerMovement : MonoBehaviour {
                     anim.SetFloat("MoveSpeed", 0);
                 }
             }
-            */
-    }
+    }*/
 	//  SOUND
 	void Playsound(int clip)
 	{

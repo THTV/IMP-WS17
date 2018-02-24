@@ -16,6 +16,6 @@ public class UserControl : MonoBehaviour
 		float h = Input.GetAxis ("Horizontal");
 		#endif
 
-		character.Move (h);
+		//character.Move (h);
 	}
 }
