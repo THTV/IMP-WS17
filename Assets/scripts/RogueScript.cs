@@ -48,7 +48,6 @@ public class RogueScript : MonoBehaviour {
 				transform.Translate (Vector2.left * Time.deltaTime * speed);
 				if (distanceToTarget < attackRange) {
 					enemyAnimator.SetTrigger ("attack");
-					enemyAnimator.SetBool ("walking", false);
 				}
 			}
 		}
