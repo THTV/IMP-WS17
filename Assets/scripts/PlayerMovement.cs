@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using UnityStandardAssets.CrossPlatformInput;
 
 public class PlayerMovement : MonoBehaviour {
 
+    public Button shootButton;
+    public Button reloadButton;
     float directionX;
     private float horizontalMovement;
     public float moveSpeed = 5f;
@@ -21,13 +24,24 @@ public class PlayerMovement : MonoBehaviour {
 	public int maxHealth = 17;							// maximun Life
 	[SerializeField] int cells = 0;						// Number of Cells collected
 	bool dead = false;
-    
+    bool mustReload = false;
+    //bool bulletEmpty = false;
+    float countdownShooting = 10f;
+    //int bulletCounter = 30;
+    [SerializeField] int bulletCounter = 30;
 
 
-	void Start()
+
+    void Start()
 	{
 		anim = GetComponent<Animator>();
 		myRigidbody = GetComponent<Rigidbody2D> ();
+        Button buttonShoot = shootButton.GetComponent<Button>();
+        Button buttonReload = reloadButton.GetComponent<Button>();
+        buttonShoot.onClick.AddListener(shootButtonPressed);      //mit onPointerDown ?
+        buttonReload.onClick.AddListener(reloadButtonClicked);
+        
+        
 	}
 
 	void Update() {
@@ -53,30 +67,11 @@ public class PlayerMovement : MonoBehaviour {
             {
                 anim.SetFloat("MoveSpeed", 0);
             }
-
-            /*if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Moved)
+            if(!mustReload)
             {
-                Vector2 myTouch = Input.GetTouch(0).position;
-
-                if (myTouch.x < Screen.width / 2)
-                {
-                    Debug.Log("LINKS");
-
-                    anim.SetInteger("Direction", 0);
-                    anim.SetFloat("MoveSpeed", 1);
-                }
-                else if (myTouch.x > Screen.width / 2)
-                {
-                    Debug.Log("Rechts");
-
-                    anim.SetInteger("Direction", 1);
-                    anim.SetFloat("MoveSpeed", 1);
-                }
+                countdownShooting -= Time.deltaTime;
                 
-                    Debug.Log("hallo");
-                    anim.SetFloat("MoveSpeed", 0f);
-                
-            }*/
+            }
         }
     }
 
@@ -111,7 +106,12 @@ public class PlayerMovement : MonoBehaviour {
 			{
 				GetComponent<Rigidbody2D>().AddForce(new Vector2(10f, 50f));
 			}
-		}
+            if (other.tag == "LifePickUp")
+            {
+                Destroy(other.gameObject);
+                curHealth += 1;
+            }
+        }
 
 		if (other.gameObject.tag == "Torch") {
 			Playsound (2); //Sound '2' == "Torch"
@@ -121,47 +121,45 @@ public class PlayerMovement : MonoBehaviour {
 	//Exit a Trigger     
 	public void OnTriggerExit2D(Collider2D other)
 	{
-		if (other.tag == "LifePickUp") {
-			Destroy (other.gameObject);
-			curHealth += 1;
-		}
+		
 	}
 
-
-	/*public void Move(float move)
-	{
-        
-        if(canMove)
+    void shootButtonPressed()
+    {
+        if (!mustReload)
+        {
+            bulletCounter -= 1;
+            //countdownShooting = 10f;
+            anim.SetBool("shooting", true);
+            anim.SetBool("weaponEmpty", false);
             
+            if (bulletCounter == 0)
             {
-				horizontalMovement = Input.GetAxis ("Horizontal");
-				
-				//Move the Player
-			    myRigidbody.velocity = new Vector2(horizontalMovement * moveSpeed, myRigidbody.velocity.y);
-			    //anim.SetFloat ("Speed", horizontalMovement);
-
-                if (Input.GetKey(KeyCode.LeftArrow))
-                {
-                    anim.SetInteger("Direction", 0);
-                    anim.SetFloat("MoveSpeed", 10);
-                    
-                }
-                else if (Input.GetKey(KeyCode.RightArrow))
-                {
-                    anim.SetInteger("Direction", 1);
-                    anim.SetFloat("MoveSpeed",10);
-                }
-                else {
-                    anim.SetFloat("MoveSpeed", 0);
-                }
+                anim.SetBool("shooting", false);
+                anim.SetBool("weaponEmpty", true);
             }
-    }*/
+        }
+    }
+    void reloadButtonClicked()
+    {
+        anim.SetBool("shooting", false);
+        anim.SetBool("weaponEmpty", true);
+        anim.SetTrigger("reload");
+        bulletCounter = 30;
+    }
+
+	
 	//  SOUND
 	void Playsound(int clip)
 	{
 		GetComponent<AudioSource>().clip = audioclip [clip];
 		GetComponent<AudioSource>().Play ();
 	}
+
+    private void OnGUI()
+    {
+        GUILayout.Label("Bullets = " + bulletCounter);
+    }
 }
 
 
