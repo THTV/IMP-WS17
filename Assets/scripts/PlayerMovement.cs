@@ -103,14 +103,15 @@ public class PlayerMovement : MonoBehaviour {
 			{
 				GetComponent<Rigidbody2D>().AddForce(new Vector2(10f, 50f));
 			}
-            if (other.tag == "LifePickUp")
-            {
-                Destroy(other.gameObject);
-                curHealth += 1;
-            }
+            
+        }
+        if (other.tag == "LifePickUp")
+        {
+            Destroy(other.gameObject);
+            curHealth += 1;
         }
 
-		if (other.gameObject.tag == "Torch") {
+        if (other.gameObject.tag == "Torch") {
 			Playsound (2); //Sound '2' == "Torch"
 		}
 	}
