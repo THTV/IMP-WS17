@@ -7,6 +7,7 @@ public class EnemyMovement : MonoBehaviour {
 	public Transform playerTransform;		//Enemy has to know where the Player is
 	public float chaseRange;
 	public float speed;
+	public int enemyLife = 3;
 
 	bool facingRight = true;				// check which direction enemy is facing
 	bool canMove = true;					// To disable enemy Movement
@@ -50,29 +51,17 @@ public class EnemyMovement : MonoBehaviour {
 		}
 	}
 
-//	void setNewIdlePoint() {
-//		//set a new random position to walk to
-//		idleToPosition = new Vector2 (transform.position.x + Random.Range (-4, 4), transform.position.y);
-//	}
-//
-//	void enemyIdle() {
-//		
-//		if (idleToPosition.x == transform.position.x) { 	// if the enemy is idled to the idleposition
-//			setNewIdlePoint();										// set an new position to idle to
-//		}
-//
-//		if (idleToPosition.x > transform.position.x) {
-//			if (facingRight) {
-//				flip();
-//			}
-//			transform.Translate (Vector2.right * Time.deltaTime * speed);
-//		} 
-//		else {
-//			if (!facingRight) {
-//				flip();
-//			}
-//			transform.Translate (Vector2.left * Time.deltaTime * speed);
-//		}
-//	}
+	void OnTriggerEnter2D(Collider2D other) // getting hit by bullet
+	{
+		if (other.gameObject.tag == "bullet" | other.gameObject.tag == "Player") 
+		{
+			enemyAnimator.SetTrigger ("hurt");
+			enemyLife--;
+			//Playsound(XXX); //Find sound for enemy when hit? 
+			if (enemyLife < 1) {
+				enemyAnimator.SetTrigger ("dead");
+				//Playsound(XXX); //Find sound for enemy-Dying? 
+			}
+		}
+	}
 }
-
