@@ -75,14 +75,14 @@ public class PlayerMovement : MonoBehaviour {
 	void FixedUpdate()
 	{
         myRigidbody.velocity = new Vector2(directionX * moveSpeed * 30, myRigidbody.velocity.y);
-        if (curHealth < 0.5) //The Death
+        if (curHealth <= 0) //The Death
 		{
 			GetComponent<Rigidbody2D>().velocity = (new Vector2 (0f, 0f));
 			Debug.Log ("YOU ARE DEAD");
 			canMove = false;
-			anim.SetBool ("Dead", true);
+			anim.SetTrigger ("dead");
 			Playsound(1); //Sound '1' == "game_over"
-			Invoke ("freeze", 7);
+			Invoke ("freeze", 4);
 		}
 	}
 
