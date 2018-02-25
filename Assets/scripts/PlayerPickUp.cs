@@ -35,7 +35,7 @@ public class PlayerPickUp : MonoBehaviour {
 
 	void OnGUI()
 	{
-		GUILayout.Label( "Energiezellen = " + energie );
+		//GUILayout.Label( "Energiezellen = " + energie );
 	}
 
 

@@ -7,11 +7,12 @@ using UnityStandardAssets.CrossPlatformInput;
 
 public class PlayerMovement : MonoBehaviour {
 
-    public Button shootButton;
     public Button reloadButton;
     float directionX;
     private float horizontalMovement;
     public float moveSpeed = 5f;
+    float counter;
+    bool bulletAvailable = false;
 
 	bool canMove = true;								// To disable Player Movement
 	Animator anim;										// Reference to the player's animator component.
@@ -25,10 +26,8 @@ public class PlayerMovement : MonoBehaviour {
 	[SerializeField] int cells = 0;						// Number of Cells collected
 	bool dead = false;
     bool mustReload = false;
-    //bool bulletEmpty = false;
-    float countdownShooting = 10f;
-    //int bulletCounter = 30;
-    [SerializeField] int bulletCounter = 30;
+    public int bulletCounter = 30;
+    [SerializeField] int energie = 0; //show me number of energie collected
 
 
 
@@ -36,12 +35,9 @@ public class PlayerMovement : MonoBehaviour {
 	{
 		anim = GetComponent<Animator>();
 		myRigidbody = GetComponent<Rigidbody2D> ();
-        Button buttonShoot = shootButton.GetComponent<Button>();
         Button buttonReload = reloadButton.GetComponent<Button>();
-        buttonShoot.onClick.AddListener(shootButtonPressed);      //mit onPointerDown ?
         buttonReload.onClick.AddListener(reloadButtonClicked);
-        
-        
+        counter = 0.3f;
 	}
 
 	void Update() {
@@ -67,11 +63,12 @@ public class PlayerMovement : MonoBehaviour {
             {
                 anim.SetFloat("MoveSpeed", 0);
             }
-            if(!mustReload)
-            {
-                countdownShooting -= Time.deltaTime;
-                
-            }
+            
+        }
+        counter -= Time.deltaTime;
+        if(counter <= 0)
+        {
+            bulletAvailable = true;
         }
     }
 
@@ -123,23 +120,26 @@ public class PlayerMovement : MonoBehaviour {
 	{
 		
 	}
-
-    void shootButtonPressed()
+    
+    public void shoot()
     {
-        if (!mustReload)
+        Debug.Log("DOWNDOWNDOWN");
+        anim.SetBool("shooting", true);
+        anim.SetBool("weaponEmpty", false);
+        if (bulletAvailable == true)
         {
             bulletCounter -= 1;
-            //countdownShooting = 10f;
-            anim.SetBool("shooting", true);
-            anim.SetBool("weaponEmpty", false);
-            
-            if (bulletCounter == 0)
-            {
-                anim.SetBool("shooting", false);
-                anim.SetBool("weaponEmpty", true);
-            }
+            counter = 0.3f;
         }
+        bulletAvailable = false;
+
+
     }
+    public void stopShooting()
+    {
+        anim.SetBool("shooting", false);
+    }
+    
     void reloadButtonClicked()
     {
         anim.SetBool("shooting", false);
@@ -159,6 +159,7 @@ public class PlayerMovement : MonoBehaviour {
     private void OnGUI()
     {
         GUILayout.Label("Bullets = " + bulletCounter);
+        GUILayout.Label("Energiezellen = " + energie);
     }
 }
 
