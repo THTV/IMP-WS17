@@ -59,8 +59,10 @@ public class EnemyMovement : MonoBehaviour {
 			enemyLife--;
 			//Playsound(XXX); //Find sound for enemy when hit? 
 			if (enemyLife < 1) {
+				canMove = false;
 				enemyAnimator.SetTrigger ("dead");
-				//Playsound(XXX); //Find sound for enemy-Dying? 
+				//Playsound(XXX); //Find sound for enemy-Dying?
+				Object.Destroy(gameObject, 1.0f);
 			}
 		}
 	}
