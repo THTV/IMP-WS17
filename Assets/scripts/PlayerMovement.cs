@@ -9,6 +9,9 @@ public class PlayerMovement : MonoBehaviour {
 
     public Button reloadButton;
     float directionX;
+    float newPositionX;
+    float oldPositionX;
+    
     private float horizontalMovement;
     public float moveSpeed = 5f;
     float counter;
@@ -38,7 +41,8 @@ public class PlayerMovement : MonoBehaviour {
         Button buttonReload = reloadButton.GetComponent<Button>();
         buttonReload.onClick.AddListener(reloadButtonClicked);
         counter = 0.3f;
-	}
+        
+    }
 
 	void Update() {
 		if (curHealth > maxHealth) {
@@ -47,13 +51,15 @@ public class PlayerMovement : MonoBehaviour {
         if (canMove)
         {
             directionX = CrossPlatformInputManager.GetAxis("Horizontal");
-            if(directionX < 0)
+            newPositionX = transform.position.x;
+
+            if(newPositionX < oldPositionX)
             {
                 Debug.Log("LINKS");
                 anim.SetInteger("Direction", 0);
                 anim.SetFloat("MoveSpeed", 1);
             }
-            else if (directionX > 0)
+            else if (newPositionX > oldPositionX)
             {
                 Debug.Log("Rechts");
                 anim.SetInteger("Direction", 1);
@@ -63,6 +69,7 @@ public class PlayerMovement : MonoBehaviour {
             {
                 anim.SetFloat("MoveSpeed", 0);
             }
+            oldPositionX = newPositionX;
             
         }
         counter -= Time.deltaTime;

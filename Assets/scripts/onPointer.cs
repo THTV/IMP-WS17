@@ -42,7 +42,7 @@ public class onPointer : MonoBehaviour, IPointerDownHandler, IPointerUpHandler {
 
     public void OnPointerDown(PointerEventData data)
     {
-        Debug.Log("Button was is being held down");
+        Debug.Log("Button is being held down");
         isDown = true;
     }
     public void OnPointerUp(PointerEventData data)
