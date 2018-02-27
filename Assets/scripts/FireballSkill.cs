@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
 public class FireballSkill : MonoBehaviour {
 
 	public float velX;
@@ -69,6 +70,7 @@ public class FireballSkill : MonoBehaviour {
 		} else {
 			FireballPosition += new Vector2 (-1f, +0.43F);
 			Instantiate (FireballLeft, FireballPosition, Quaternion.identity);
+            
 		}
 	}
 
@@ -78,4 +80,4 @@ public class FireballSkill : MonoBehaviour {
 			Destroy(gameObject);           
 		}
 	}
-}
+}*/

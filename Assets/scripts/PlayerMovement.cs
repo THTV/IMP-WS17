@@ -71,7 +71,7 @@ public class PlayerMovement : MonoBehaviour {
                 anim.SetInteger("Direction", 1);
                 anim.SetFloat("MoveSpeed", 1);
             }
-            else
+            else if(newPositionX == oldPositionX)
             {
                 anim.SetFloat("MoveSpeed", 0);
             }
@@ -187,7 +187,7 @@ public class PlayerMovement : MonoBehaviour {
 		
     }
 		
-	void Playsound(int clip)
+	public void Playsound(int clip)
 	{
 		GetComponent<AudioSource>().clip = audioclip [clip];
 		GetComponent<AudioSource>().Play ();
