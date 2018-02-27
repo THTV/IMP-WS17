@@ -10,6 +10,9 @@ public class Bullet : MonoBehaviour {
 
 	void Start () {
 		rb = GetComponent<Rigidbody2D> ();
+
+		// to avoid trash we destroy bullets after 8 seconds
+		StartCoroutine (KillBullets());
 	}
 
 	void Update () {
@@ -21,5 +24,10 @@ public class Bullet : MonoBehaviour {
 		if (other.gameObject.tag == "Enemy") {
 			Destroy(gameObject);           
 		}
+	}
+
+	private IEnumerator KillBullets() {
+		yield return new WaitForSecondsRealtime (8);
+		Destroy (gameObject);
 	}
 }

@@ -24,6 +24,7 @@ public class RogueScript : MonoBehaviour {
 	{
 		enemyAnimator = GetComponent<Animator>();
 		enemyRigidbody = GetComponent<Rigidbody2D> ();
+		target = GameObject.FindGameObjectWithTag ("Player").transform;
 	}
 
 
@@ -72,6 +73,7 @@ public class RogueScript : MonoBehaviour {
 	{
 		if (other.gameObject.tag == "bullet") {
 			enemyCurHealth--;
+			enemyAnimator.SetTrigger ("hurt");
 		}
 	}
 
