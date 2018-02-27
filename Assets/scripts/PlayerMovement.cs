@@ -7,7 +7,12 @@ using UnityStandardAssets.CrossPlatformInput;
 
 public class PlayerMovement : MonoBehaviour {
 
-    public Button reloadButton;
+    public Button reloadButton, ShootButton;
+	public GameObject BulletToRight, BulletToLeft;
+	Vector2 bulletPosition;
+	public float fireRate = 0.5f;
+	float nextFire = 0.0f;
+
     float directionX;
     float newPositionX;
     float oldPositionX;
@@ -18,6 +23,7 @@ public class PlayerMovement : MonoBehaviour {
     bool bulletAvailable = false;
 
 	bool canMove = true;								// To disable Player Movement
+	bool facingright = false;							// start Facing to the Left
 	Animator anim;										// Reference to the player's animator component
 	Rigidbody2D myRigidbody;
 
@@ -29,7 +35,7 @@ public class PlayerMovement : MonoBehaviour {
 	bool dead = false;
     bool mustReload = false;
     public int bulletCounter = 30;
-    [SerializeField] int energie = 0; //show me number of energie collected
+    [SerializeField] int energie = 0; 					//show me number of energie collected
 
 
 
@@ -37,8 +43,8 @@ public class PlayerMovement : MonoBehaviour {
 	{
 		anim = GetComponent<Animator>();
 		myRigidbody = GetComponent<Rigidbody2D> ();
-        Button buttonReload = reloadButton.GetComponent<Button>();
-        buttonReload.onClick.AddListener(reloadButtonClicked);
+       // Button buttonReload = reloadButton.GetComponent<Button>();
+       // buttonReload.onClick.AddListener(reloadButtonClicked);
         counter = 0.3f;
     }
 
@@ -54,12 +60,14 @@ public class PlayerMovement : MonoBehaviour {
             if(newPositionX < oldPositionX)
             {
                 Debug.Log("LINKS");
+				facingright = false;
                 anim.SetInteger("Direction", 0);
                 anim.SetFloat("MoveSpeed", 1);
             }
             else if (newPositionX > oldPositionX)
             {
                 Debug.Log("Rechts");
+				facingright = true;
                 anim.SetInteger("Direction", 1);
                 anim.SetFloat("MoveSpeed", 1);
             }
@@ -125,6 +133,19 @@ public class PlayerMovement : MonoBehaviour {
         {
             bulletCounter -= 1;
             counter = 0.3f;
+
+			bulletPosition = transform.position;
+			if (facingright) {
+				bulletPosition += new Vector2 (+1f, +0.43f);
+				Instantiate (BulletToRight, bulletPosition, Quaternion.identity);
+				Playsound (3); // sound '3' == "bullet"
+
+			} else {
+				bulletPosition += new Vector2 (-1f, +0.43F);
+				Instantiate (BulletToLeft, bulletPosition, Quaternion.identity);
+				Playsound (3); // sound '3' == "bullet"
+
+			}
         }
         bulletAvailable = false;
     }
@@ -135,12 +156,15 @@ public class PlayerMovement : MonoBehaviour {
     }
 
 	private IEnumerator ReloadWeapon() {
+		ShootButton.enabled = false;
 		anim.SetBool("shooting", false);
 		anim.SetBool("weaponEmpty", true);
 		anim.SetTrigger("reload");
-		bulletCounter = 30;
+
 		yield return new WaitForSecondsRealtime (1);
 		anim.SetBool ("weaponEmpty", false);
+		bulletCounter = 30;
+		ShootButton.enabled = true;
 	}
     
     public void reloadButtonClicked()

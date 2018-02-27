@@ -22,7 +22,7 @@ public class PlayerPickUp : MonoBehaviour {
 		{
 			Destroy(other.gameObject);
 			energie++;
-			Playsound(0);   //Sound '0' == "coin9"
+			Playsound(0);   //Sound '4' == "coin9"
 		}
 	}
 

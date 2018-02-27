@@ -20,7 +20,6 @@ public class onPointer : MonoBehaviour, IPointerDownHandler, IPointerUpHandler {
         bulletCounter = playerMovement.bulletCounter;
         if (isDown)
         {
-            Debug.Log(bulletCounter);
             if(bulletCounter > 0)
             {
                 playerMovement.shoot();
