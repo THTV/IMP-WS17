@@ -8,6 +8,7 @@ public class EnemyMovement : MonoBehaviour {
 	public float chaseRange;
 	public float speed;
 	public int enemyLife = 3;
+    
 
 	bool facingRight = true;				// check which direction enemy is facing
 	bool canMove = true;					// To disable enemy Movement
@@ -70,5 +71,22 @@ public class EnemyMovement : MonoBehaviour {
 				Destroy (this); // this == destroys this script on the GameObject
 			}
 		}
+        if(other.tag == "Fireball")
+        {
+            Debug.Log("Enemy hit");
+            enemyAnimator.SetTrigger("hurt");
+            enemyLife -= 5;
+            //Playsound(XXX); //Find sound for enemy when hit? 
+            if (enemyLife < 1)
+            {
+                canMove = false;
+                enemyAnimator.SetTrigger("dead");
+                // Destroying some parts to leave a Dead, walkable Body behind
+                Destroy(enemyRigidbody);
+                Destroy(GetComponent<CircleCollider2D>());
+                Destroy(GetComponent<BoxCollider2D>());
+                Destroy(this); // this == destroys this script on the GameObject
+            }
+        }
 	}
 }

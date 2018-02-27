@@ -75,6 +75,11 @@ public class RogueScript : MonoBehaviour {
 			enemyCurHealth--;
 			enemyAnimator.SetTrigger ("hurt");
 		}
+        if(other.tag == "Fireball")
+        {
+            enemyCurHealth -= 5;
+            enemyAnimator.SetTrigger("hurt");
+        }
 	}
 
 	void enemyDeath() {
