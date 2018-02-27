@@ -9,23 +9,32 @@ public class onPointer : MonoBehaviour, IPointerDownHandler, IPointerUpHandler {
     private bool isDown = false;
     private PlayerMovement playerMovement;
     private int bulletCounter;
+    private bool mustReload;
    
 
     private void Start()
     {
         playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
+        this.mustReload = playerMovement.mustReload;
     }
 
     void Update () {
         bulletCounter = playerMovement.bulletCounter;
         if (isDown)
         {
-            if(bulletCounter > 0)
+            if(bulletCounter > 0 && mustReload == false)
             {
+                Debug.Log("1");
                 playerMovement.shoot();
+            }
+            else if(mustReload == true)
+            {
+                Debug.Log("2");
+                playerMovement.stopShooting();
             }
             else
             {
+                Debug.Log("3");
                 playerMovement.stopShooting();
             }
             
@@ -38,12 +47,10 @@ public class onPointer : MonoBehaviour, IPointerDownHandler, IPointerUpHandler {
 
     public void OnPointerDown(PointerEventData data)
     {
-        Debug.Log("Button is being held down");
         isDown = true;
     }
     public void OnPointerUp(PointerEventData data)
     {
-        Debug.Log("Button is being released now");
         isDown = false;
     }
 }

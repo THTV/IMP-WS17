@@ -33,7 +33,7 @@ public class PlayerMovement : MonoBehaviour {
 	public int maxHealth = 17;							// maximun Life
 	[SerializeField] int cells = 0;						// Number of Cells collected
 	bool dead = false;
-    bool mustReload = false;
+    public bool mustReload = false;
     public int bulletCounter = 30;
     [SerializeField] int energie = 0; 					//show me number of energie collected
 
@@ -133,11 +133,10 @@ public class PlayerMovement : MonoBehaviour {
     
     public void shoot()
     {
-        Debug.Log("DOWNDOWNDOWN");
-        anim.SetBool("shooting", true);
-        anim.SetBool("weaponEmpty", false);
-        if (bulletAvailable == true)
+        if (bulletAvailable == true && mustReload == false)
         {
+            anim.SetBool("shooting", true);
+            anim.SetBool("weaponEmpty", false);
             bulletCounter -= 1;
             counter = 0.3f;
 
@@ -163,7 +162,8 @@ public class PlayerMovement : MonoBehaviour {
     }
 
 	private IEnumerator ReloadWeapon() {
-		canMove = false;
+        mustReload = true;
+        canMove = false;
 		ShootButton.enabled = false;
 		anim.SetBool("shooting", false);
 		anim.SetBool("weaponEmpty", true);
@@ -171,7 +171,8 @@ public class PlayerMovement : MonoBehaviour {
 		Playsound (6); // sound '6' == "reload"
 
 		yield return new WaitForSecondsRealtime (1);
-		anim.SetBool ("weaponEmpty", false);
+        mustReload = false;
+        anim.SetBool ("weaponEmpty", false);
 		bulletCounter = 30;
 		ShootButton.enabled = true;
 		canMove = true;
@@ -179,7 +180,11 @@ public class PlayerMovement : MonoBehaviour {
     
     public void reloadButtonClicked()
     {
-		StartCoroutine (ReloadWeapon());
+        if(bulletCounter < 30)
+        {
+            StartCoroutine (ReloadWeapon());
+        }
+		
     }
 		
 	void Playsound(int clip)
