@@ -18,10 +18,9 @@ public class PlayerMovement : MonoBehaviour {
     bool bulletAvailable = false;
 
 	bool canMove = true;								// To disable Player Movement
-	Animator anim;										// Reference to the player's animator component.
+	Animator anim;										// Reference to the player's animator component
 	Rigidbody2D myRigidbody;
 
-	//Sound Array
 	public AudioClip[] audioclip;						// Creates an Array to store my GameSounds
 
 	public int curHealth;								// Number of Lifes left
@@ -41,7 +40,6 @@ public class PlayerMovement : MonoBehaviour {
         Button buttonReload = reloadButton.GetComponent<Button>();
         buttonReload.onClick.AddListener(reloadButtonClicked);
         counter = 0.3f;
-        
     }
 
 	void Update() {
@@ -103,15 +101,10 @@ public class PlayerMovement : MonoBehaviour {
 	{
 		if (other.gameObject.tag == "Hurt" || other.gameObject.tag == "Enemy") 
 		{
-			//anim.SetBool ("Hurt", true);
 			curHealth--;
-			Playsound(0); //Sound '0' == "argh-woman"
-			if(curHealth>0)
-			{
-				GetComponent<Rigidbody2D>().AddForce(new Vector2(10f, 50f));
-			}
-            
+			Playsound(0); //Sound '0' == "argh-woman"           
         }
+
         if (other.tag == "LifePickUp")
         {
             Destroy(other.gameObject);
@@ -121,12 +114,6 @@ public class PlayerMovement : MonoBehaviour {
         if (other.gameObject.tag == "Torch") {
 			Playsound (2); //Sound '2' == "Torch"
 		}
-	}
-
-	//Exit a Trigger     
-	public void OnTriggerExit2D(Collider2D other)
-	{
-		
 	}
     
     public void shoot()
@@ -140,24 +127,27 @@ public class PlayerMovement : MonoBehaviour {
             counter = 0.3f;
         }
         bulletAvailable = false;
-
-
     }
+
     public void stopShooting()
     {
         anim.SetBool("shooting", false);
     }
-    
-    void reloadButtonClicked()
-    {
-        anim.SetBool("shooting", false);
-        anim.SetBool("weaponEmpty", true);
-        anim.SetTrigger("reload");
-        bulletCounter = 30;
-    }
 
-	
-	//  SOUND
+	private IEnumerator ReloadWeapon() {
+		anim.SetBool("shooting", false);
+		anim.SetBool("weaponEmpty", true);
+		anim.SetTrigger("reload");
+		bulletCounter = 30;
+		yield return new WaitForSecondsRealtime (1);
+		anim.SetBool ("weaponEmpty", false);
+	}
+    
+    public void reloadButtonClicked()
+    {
+		StartCoroutine (ReloadWeapon());
+    }
+		
 	void Playsound(int clip)
 	{
 		GetComponent<AudioSource>().clip = audioclip [clip];
@@ -170,7 +160,3 @@ public class PlayerMovement : MonoBehaviour {
         GUILayout.Label("Energiezellen = " + energie);
     }
 }
-
-
-
-

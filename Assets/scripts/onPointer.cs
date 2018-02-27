@@ -13,10 +13,9 @@ public class onPointer : MonoBehaviour, IPointerDownHandler, IPointerUpHandler {
 
     private void Start()
     {
-        //playerMovement = gameObject.GetComponent<PlayerMovement>();
         playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
     }
-    // Update is called once per frame
+
     void Update () {
         bulletCounter = playerMovement.bulletCounter;
         if (isDown)
@@ -37,8 +36,6 @@ public class onPointer : MonoBehaviour, IPointerDownHandler, IPointerUpHandler {
             playerMovement.stopShooting();
         }
 	}
-
-    
 
     public void OnPointerDown(PointerEventData data)
     {
