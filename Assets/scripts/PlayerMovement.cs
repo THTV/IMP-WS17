@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour {
 	bool dead = false;
     public bool mustReload = false;
     public int bulletCounter = 30;
-    [SerializeField] int energie = 0; 					//show me number of energie collected
+    public int energie = 0; 							//show me number of energie collected
 
 
 
@@ -192,10 +192,4 @@ public class PlayerMovement : MonoBehaviour {
 		GetComponent<AudioSource>().clip = audioclip [clip];
 		GetComponent<AudioSource>().Play ();
 	}
-
-    private void OnGUI()
-    {
-        GUILayout.Label("Bullets = " + bulletCounter);
-        GUILayout.Label("Energiezellen = " + energie);
-    }
 }

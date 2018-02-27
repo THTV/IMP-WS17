@@ -13,6 +13,7 @@ public class Torch : MonoBehaviour {
 	{
 		torchAnimator = GetComponent<Animator>();
 		torchCollider = GetComponent<BoxCollider2D> ();
+		target = GameObject.FindGameObjectWithTag ("Player").transform;
 	}
 		
 	void Update () {
