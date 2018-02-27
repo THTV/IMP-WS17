@@ -13,11 +13,13 @@ public class EnemyMovement : MonoBehaviour {
 	bool canMove = true;					// To disable enemy Movement
 
 	private Animator enemyAnimator;			// Reference to the enemys's animator component.
+	private Rigidbody2D enemyRigidbody;		// And his Rigidbody
 
 	void Awake() // Set Enemys Components
 	{
 		playerTransform = GameObject.FindGameObjectWithTag ("Player").transform;
 		enemyAnimator = GetComponent<Animator>();
+		enemyRigidbody = GetComponent<Rigidbody2D> ();
 	}
 
 	void flip() {	 //flip the direction the enemy is facing
@@ -53,7 +55,7 @@ public class EnemyMovement : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other) // getting hit by bullet
 	{
-		if (other.gameObject.tag == "bullet" | other.gameObject.tag == "Player") 
+		if (other.gameObject.tag == "bullet") 
 		{
 			enemyAnimator.SetTrigger ("hurt");
 			enemyLife--;
@@ -61,8 +63,11 @@ public class EnemyMovement : MonoBehaviour {
 			if (enemyLife < 1) {
 				canMove = false;
 				enemyAnimator.SetTrigger ("dead");
-				//Playsound(XXX); //Find sound for enemy-Dying?
-				Object.Destroy(gameObject, 1.0f);
+				// Destroying some parts to leave a Dead, walkable Body behind
+				Destroy (enemyRigidbody);
+				Destroy (GetComponent<CircleCollider2D> ());
+				Destroy (GetComponent<BoxCollider2D> ());
+				Destroy (this); // this == destroys this script on the GameObject
 			}
 		}
 	}

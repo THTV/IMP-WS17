@@ -117,10 +117,17 @@ public class PlayerMovement : MonoBehaviour {
         {
             Destroy(other.gameObject);
             curHealth += 1;
+			Playsound(5);   //Sound '5' == "LifePickUp"
         }
 
         if (other.gameObject.tag == "Torch") {
 			Playsound (2); //Sound '2' == "Torch"
+		}
+		if (other.tag == "Energiecrystal") 
+		{
+			Destroy(other.gameObject);
+			energie++;
+			Playsound(4);   //Sound '4' == "coin9"
 		}
 	}
     
@@ -156,15 +163,18 @@ public class PlayerMovement : MonoBehaviour {
     }
 
 	private IEnumerator ReloadWeapon() {
+		canMove = false;
 		ShootButton.enabled = false;
 		anim.SetBool("shooting", false);
 		anim.SetBool("weaponEmpty", true);
 		anim.SetTrigger("reload");
+		Playsound (6); // sound '6' == "reload"
 
 		yield return new WaitForSecondsRealtime (1);
 		anim.SetBool ("weaponEmpty", false);
 		bulletCounter = 30;
 		ShootButton.enabled = true;
+		canMove = true;
 	}
     
     public void reloadButtonClicked()

@@ -9,6 +9,8 @@ public class RogueScript : MonoBehaviour {
 	public float attackRange;
 	public float speed;
 
+	public AudioClip[] audioclip;			// Creates an Array to store my GameSounds
+
 	public int enemyCurHealth;				// Number of Lifes left
 	public int enemyMaxHealth = 8;			// maximun Life
 
@@ -27,7 +29,7 @@ public class RogueScript : MonoBehaviour {
 
 	void Update () { // Enemy follow the Player
 		float distanceToTarget = Vector2.Distance (transform.position,target.position);
-		if (distanceToTarget < chaseRange) {
+		if (distanceToTarget < chaseRange && distanceToTarget > attackRange) {
 			//start chasing the target - turn and move towards the player
 			enemyAnimator.SetBool("walking",true);
 			if (target.position.x > transform.position.x) {		
@@ -51,6 +53,11 @@ public class RogueScript : MonoBehaviour {
 				}
 			}
 		}
+
+		// Death of the Enemy
+		if (enemyCurHealth < 1) {
+			enemyDeath ();
+		}
 	}
 
 	void flip() {	 //flip the direction the enemy is facing
@@ -58,5 +65,30 @@ public class RogueScript : MonoBehaviour {
 		Vector3 theScale = transform.localScale;
 		theScale.x *= -1;
 		transform.localScale = theScale;
+	}
+
+	//gettin some dmg from bullets
+	void OnTriggerEnter2D(Collider2D other)
+	{
+		if (other.gameObject.tag == "bullet") {
+			enemyCurHealth--;
+		}
+	}
+
+	void enemyDeath() {
+		enemyAnimator.SetTrigger ("death");
+		Playsound(0); // Sound '0' == "rogue_dying"
+
+		// Destroying some parts to leave a Dead, walkable Body behind
+		Destroy (enemyRigidbody);
+		Destroy (GetComponent<CapsuleCollider2D> ());
+		Destroy (GetComponent<BoxCollider2D> ());
+		Destroy (this); // this == destroys this script on the GameObject
+	}
+
+	void Playsound(int clip)
+	{
+		GetComponent<AudioSource>().clip = audioclip [clip];
+		GetComponent<AudioSource>().Play ();
 	}
 }

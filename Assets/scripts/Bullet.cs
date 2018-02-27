@@ -15,4 +15,11 @@ public class Bullet : MonoBehaviour {
 	void Update () {
 		rb.velocity = new Vector2 (velX, velY);
 	}
+
+	void OnTriggerEnter2D(Collider2D other)
+	{
+		if (other.gameObject.tag == "Enemy") {
+			Destroy(gameObject);           
+		}
+	}
 }
