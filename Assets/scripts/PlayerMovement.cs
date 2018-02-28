@@ -12,7 +12,6 @@ public class PlayerMovement : MonoBehaviour {
 	Vector2 bulletPosition;
 	public float fireRate = 0.5f;
 	float nextFire = 0.0f;
-
     float directionX;
     float newPositionX;
     float oldPositionX;
@@ -21,14 +20,12 @@ public class PlayerMovement : MonoBehaviour {
     public float moveSpeed = 5f;
     float counter;
     bool bulletAvailable = false;
-
 	bool canMove = true;								// To disable Player Movement
 	public bool facingright = false;							// start Facing to the Left
 	Animator anim;										// Reference to the player's animator component
 	Rigidbody2D myRigidbody;
 
 	public AudioClip[] audioclip;						// Creates an Array to store my GameSounds
-
 	public int curHealth;								// Number of Lifes left
 	public int maxHealth = 17;							// maximun Life
 	[SerializeField] int cells = 0;						// Number of Cells collected
@@ -36,8 +33,6 @@ public class PlayerMovement : MonoBehaviour {
     public bool mustReload = false;
     public int bulletCounter = 30;
     public int energie = 0; 							//show me number of energie collected
-
-
 
     void Start()
 	{
@@ -133,11 +128,9 @@ public class PlayerMovement : MonoBehaviour {
                     anim.SetFloat("MoveSpeed", 0);
                 }
                 oldPositionX = newPositionX;
-
             }
             yield return new WaitForSecondsRealtime(0.1f);
         }
-        
     }
     public void shoot()
     {
@@ -158,7 +151,6 @@ public class PlayerMovement : MonoBehaviour {
 				bulletPosition += new Vector2 (-1f, +0.43F);
 				Instantiate (BulletToLeft, bulletPosition, Quaternion.identity);
 				Playsound (3); // sound '3' == "bullet"
-
 			}
         }
         bulletAvailable = false;
@@ -192,7 +184,6 @@ public class PlayerMovement : MonoBehaviour {
         {
             StartCoroutine (ReloadWeapon());
         }
-		
     }
 		
 	public void Playsound(int clip)

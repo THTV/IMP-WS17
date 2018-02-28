@@ -12,8 +12,6 @@ public class WormScript : MonoBehaviour {
 	public Transform player;				//Enemy has to know who the Player is
 	public float attackRange;
 
-
-
 	void Start() // Set Enemys Components
 	{
 		enemyAnimator = GetComponent<Animator>();
@@ -46,6 +44,4 @@ public class WormScript : MonoBehaviour {
 		theScale.x *= -1;
 		transform.localScale = theScale;
 	}
-
-
 }

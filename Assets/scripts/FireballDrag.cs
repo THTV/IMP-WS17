@@ -36,7 +36,6 @@ public class FireballDrag : MonoBehaviour {
         {
             playerMovement.curHealth -= 1;
             playerMovement.Playsound(0);
-            
         }
     }
 }

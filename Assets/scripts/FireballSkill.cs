@@ -9,8 +9,6 @@ public class FireballSkill : MonoBehaviour {
 	public float velY;
 	Rigidbody2D rb;
 	Animator anim;
-    
-    
 
 	public Transform playerTransform;
 	public Transform targetOfFireball;

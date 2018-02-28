@@ -21,10 +21,8 @@ public class TeleportDrag : MonoBehaviour {
 
     public void BeginDrag()
     {
-
         OffsetX = Input.mousePosition.x - transform.position.x; 
         OffsetY = Input.mousePosition.y - transform.position.y;
-
     }
     public void OnDrag()
     {
@@ -36,6 +34,4 @@ public class TeleportDrag : MonoBehaviour {
         player.transform.position = new Vector2(newPosition.x, 0);
         transform.position = originalPosition;
     }
-    
-
 }

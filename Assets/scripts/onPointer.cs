@@ -10,8 +10,7 @@ public class onPointer : MonoBehaviour, IPointerDownHandler, IPointerUpHandler {
     private PlayerMovement playerMovement;
     private int bulletCounter;
     private bool mustReload;
-   
-
+ 
     private void Start()
     {
         playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
@@ -36,8 +35,7 @@ public class onPointer : MonoBehaviour, IPointerDownHandler, IPointerUpHandler {
             {
                 Debug.Log("3");
                 playerMovement.stopShooting();
-            }
-            
+            }    
         }
         else
         {
