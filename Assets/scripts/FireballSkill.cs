@@ -9,9 +9,8 @@ public class FireballSkill : MonoBehaviour {
 	public float velY;
 	Rigidbody2D rb;
 	Animator anim;
-    private EnemyZoneChecker zone;
-    private EnemyMovement enemy;
-    private GameObject enemyAnim;
+    
+    
 
 	public Transform playerTransform;
 	public Transform targetOfFireball;
