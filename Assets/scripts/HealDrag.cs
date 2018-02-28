@@ -16,12 +16,6 @@ public class HealDrag : MonoBehaviour {
         playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void BeginDrag()
     {
 

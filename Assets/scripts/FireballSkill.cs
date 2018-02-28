@@ -2,13 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-/*
+
 public class FireballSkill : MonoBehaviour {
 
 	public float velX;
 	public float velY;
 	Rigidbody2D rb;
 	Animator anim;
+    private EnemyZoneChecker zone;
+    private EnemyMovement enemy;
+    private GameObject enemyAnim;
 
 	public Transform playerTransform;
 	public Transform targetOfFireball;
@@ -22,6 +25,7 @@ public class FireballSkill : MonoBehaviour {
 		playerTransform = GameObject.FindGameObjectWithTag ("Player").transform;
 		rb = GetComponent<Rigidbody2D> ();
 		anim = GetComponent<Animator>();
+        
 	}
 
 	void Update () {
@@ -80,4 +84,4 @@ public class FireballSkill : MonoBehaviour {
 			Destroy(gameObject);           
 		}
 	}
-}*/
+}

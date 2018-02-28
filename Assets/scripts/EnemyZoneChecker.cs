@@ -11,12 +11,20 @@ public class EnemyZoneChecker : MonoBehaviour
     {
         isEnemyInZone = false;
     }
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if(collision.tag == "Enemy")
         {
-            Debug.Log("say Hi");
+            isEnemyInZone = true;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log(isEnemyInZone);
+        if(collision.tag == "Fireball" && isEnemyInZone == true)
+        {
+            Debug.Log("aua");
         }
     }
 }

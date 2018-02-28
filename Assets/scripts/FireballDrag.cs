@@ -15,13 +15,6 @@ public class FireballDrag : MonoBehaviour {
         originalPosition = transform.position;
         playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void BeginDrag()
     {
 

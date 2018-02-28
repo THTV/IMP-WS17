@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour {
     bool bulletAvailable = false;
 
 	bool canMove = true;								// To disable Player Movement
-	bool facingright = false;							// start Facing to the Left
+	public bool facingright = false;							// start Facing to the Left
 	Animator anim;										// Reference to the player's animator component
 	Rigidbody2D myRigidbody;
 
@@ -46,38 +46,14 @@ public class PlayerMovement : MonoBehaviour {
        // Button buttonReload = reloadButton.GetComponent<Button>();
        // buttonReload.onClick.AddListener(reloadButtonClicked);
         counter = 0.3f;
+        StartCoroutine(move());
     }
 
 	void Update() {
 		if (curHealth > maxHealth) {
 			curHealth = maxHealth;
 		}
-        if (canMove)
-        {
-            directionX = CrossPlatformInputManager.GetAxis("Horizontal");
-            newPositionX = transform.position.x;
 
-            if(newPositionX < oldPositionX)
-            {
-                Debug.Log("LINKS");
-				facingright = false;
-                anim.SetInteger("Direction", 0);
-                anim.SetFloat("MoveSpeed", 1);
-            }
-            else if (newPositionX > oldPositionX)
-            {
-                Debug.Log("Rechts");
-				facingright = true;
-                anim.SetInteger("Direction", 1);
-                anim.SetFloat("MoveSpeed", 1);
-            }
-            else if(newPositionX == oldPositionX)
-            {
-                anim.SetFloat("MoveSpeed", 0);
-            }
-            oldPositionX = newPositionX;
-            
-        }
         counter -= Time.deltaTime;
         if(counter <= 0)
         {
@@ -87,7 +63,7 @@ public class PlayerMovement : MonoBehaviour {
 
 	void FixedUpdate()
 	{
-        myRigidbody.velocity = new Vector2(directionX * moveSpeed * 30, myRigidbody.velocity.y);
+        myRigidbody.velocity = new Vector2(directionX * moveSpeed, myRigidbody.velocity.y);
         if (curHealth <= 0) //The Death
 		{
 			GetComponent<Rigidbody2D>().velocity = (new Vector2 (0f, 0f));
@@ -131,6 +107,38 @@ public class PlayerMovement : MonoBehaviour {
 		}
 	}
     
+    private IEnumerator move()
+    {
+        while (true)
+        {
+            if (canMove)
+            {
+                directionX = CrossPlatformInputManager.GetAxis("Horizontal");
+                newPositionX = transform.position.x;
+
+                if (newPositionX < oldPositionX)
+                {
+                    facingright = false;
+                    anim.SetInteger("Direction", 0);
+                    anim.SetFloat("MoveSpeed", 1);
+                }
+                else if (newPositionX > oldPositionX)
+                {
+                    facingright = true;
+                    anim.SetInteger("Direction", 1);
+                    anim.SetFloat("MoveSpeed", 1);
+                }
+                else if (newPositionX == oldPositionX)
+                {
+                    anim.SetFloat("MoveSpeed", 0);
+                }
+                oldPositionX = newPositionX;
+
+            }
+            yield return new WaitForSecondsRealtime(0.1f);
+        }
+        
+    }
     public void shoot()
     {
         if (bulletAvailable == true && mustReload == false)
